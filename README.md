@@ -16,9 +16,10 @@
 * IMWUT: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies
 * TMC: ACM Transactions on Mobile Computing
 * TOG: ACM Transactions on Graphics
-* T-RO: Transaction on Robotics
-* RO-L: Robotics & Automation Magazine
-* RA-L: Robotics and Automation Society
+* TPAMI: IEEE Transactions on Pattern Analysis and Machine Intelligence
+* T-RO: IEEE Transaction on Robotics
+* RO-L: IEEE Robotics & Automation Magazine
+* RA-L: IEEE Robotics and Automation Society
 * IJRR: International Journal of Robotics Research
 
 ## Conference
