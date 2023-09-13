@@ -1,0 +1,91 @@
+(function($){
+	
+	// Header Area start
+
+
+	  $(window).on('scroll',function() {    
+	   var scroll = $(window).scrollTop();
+	   if (scroll < 245) {
+	    $(".header-sticky").removeClass("sticky");
+	   }else{
+	    $(".header-sticky").addClass("sticky");
+	   }
+	  }); 
+	  
+
+	if ( $('body').hasClass('logged-in') ) {
+		var top_offset = $('.header-area').height() + 32;
+	} else {
+		var top_offset = $('.header-area').height() - 0;
+	}
+
+	$('.primary-nav-one-page nav').onePageNav({
+	     scrollOffset: top_offset,
+		 scrollSpeed: 750,
+		 easing: 'swing',
+		 currentClass: 'active',
+	});
+
+	$('body').scrollspy({target: ".primary-nav-wrap nav"});
+	$(".primary-nav-one-page nav ul li:first-child").addClass("active"); 
+
+	$('.primary-nav-wrap > nav > ul > li').slice(-2).addClass('last-elements');
+	
+    /*-- Mobile Menu --*/
+
+    $('.primary-nav-wrap nav').meanmenu({
+        meanScreenWidth: php_vars.key_1,
+        meanMenuContainer: '.mobile-menu',
+        meanMenuClose: '<i class="fa fa-times"></i>',
+        meanMenuOpen: '<i class="fa fa-bars"></i>',
+        meanRevealPosition: 'right',
+        meanMenuCloseSize: '25px',
+    });
+
+	/*========================================*/
+	/*  scrollUp
+	/*========================================*/
+    $.scrollUp({
+        scrollText: '<i class="fa fa-angle-up"></i>',
+        easingType: 'linear',
+        scrollSpeed: 900,
+        animation: 'fade'
+    });
+
+    /*--
+    all-courses
+    ------------------------*/
+    $('.top-courses-area').slick({
+      centerMode: true,
+      dots: true,
+      centerPadding: '0',
+      slidesToShow: 3,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1100,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 970,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });	
+	
+	
+	
+    //WOW
+	new WOW().init();
+	
+})(jQuery);

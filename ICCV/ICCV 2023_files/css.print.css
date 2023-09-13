@@ -1,0 +1,382 @@
+/*=====================*\
+    BASE COMMUNE
+\*=====================*/
+*{                          font-family:"Times New Roman", Times, serif;color:#000;}
+body{                       font-size:12pt;}
+ul,ol,dl{                   padding:0;margin:0;}
+ol li{                      list-style:decimal outside;}
+ul li{                      list-style:disc outside;}
+li,dd,blockquote{           margin-left:2em;}
+p{                          margin:.75em 0;}
+a{                          text-decoration:none;}
+a img{                      border:0;}
+img{                        max-width:100%;}
+ins{                        text-decoration:none;}
+del{                        text-decoration:line-through;}
+abbr,acronym{               border-bottom:1px dotted #000;}
+table{                      border-collapse:collapse;border:1px solid #333;}
+td,th{                      vertical-align:middle;padding:0.2em;border:1px solid #333;}
+h1,h2,h3,h4,h5,h6{          margin:1em 0 .5em 0;font-weight:bold;font-style:normal;}
+h1{                         font-size:20pt;line-height: 22pt;}
+h2{                         font-size:16pt; line-height: 18pt;}
+h3{                         font-size:12pt; line-height: 14pt;}
+h4,h5,h6{                   font-size:12pt;}
+#main a[href]:after{        content:" \0000a0[" attr(href) "]\0000a0 ";}
+#Breadcrumbs a[href]:after, 
+table a[href]:after{        content:"" !important;}
+#Breadcrumbs a[href]:before{content:">\0000a0" !important;}
+
+h1,h2,h3{
+    color:#0f3a61;
+}
+h1{ 
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+h2{ 
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+h3{ 
+}
+h4{
+    color:#3b3b3b;
+}
+h5,
+h6{
+    color:#3b3b3b;
+}
+/*=====================*\
+    DISPLAY NONE
+\*=====================*/
+/*#logo,*/
+form,
+.conseil,
+#skip,
+#langs,
+#search,
+#debug1,
+#debug2,
+#bt_debug1,
+#bt_debug2,
+#btn_menu,
+#main_nav,
+#menus_v,
+#m3,
+#animation_frame,
+#main .rss,
+.mfp-image-holder .mfp-close,
+.mfp-arrow,
+.mfp-bottom-bar,
+.mfp-preloader,
+.v_youtube,
+audio,
+video,
+#calendriers,
+#raccourcis{
+    display:none;
+}
+#main_header #main_menu,
+#main > .center #nav,
+#m3{
+    display:none !important;
+}
+a[href]:after {
+    content: none !important;
+}
+/*=====================*\
+    CLASSES DE BASE
+\*=====================*/
+.aright{			text-align:right;}
+.aleft{				text-align:left;}
+.fleft{				float:left;}
+.fright{			float:right;}
+.fnone{				float:none;clear:both;}
+img.fleft{			float:left;margin:0 1em 0.5em 0;}
+img.fright{			float:right;margin:0 0 0.5em 1em;}
+img.fleft,
+img.fright { width:40%; }
+img.fnone{			margin:0 auto 0.5em auto;}
+.c{				display:none;}
+.v{				display:block;}
+.spacer{			margin:0;padding:0;clear:both;line-height:0;font-size:0;height:0;}
+.flex {
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:-webkit-flex;
+    display:flex;
+}
+.center{
+    padding : 15px;
+}
+/*=====================*\
+    ALERTES
+\*=====================*/
+#message{
+    border:2px dashed #600;
+    color:#600;
+    font-weight:bold;
+    background:url(/img/css/error.png) no-repeat 10px 10px #FFF;
+    text-indent:20px;
+    line-height:18px;
+}
+
+/*=====================*\
+    TABLEAUX
+\*=====================*/
+#main table{
+    width:100%;
+    margin: 1.5em 0;
+}
+#main table thead tr th,
+#main table thead tr td{
+    background-color: #888;
+    padding:5px;
+    text-align:center;
+}
+#main table thead tr th,
+#main table thead tr th a,
+#main table thead tr td,
+#main table thead tr td a{
+    font-weight:bold;
+    color:#FFF !important;
+    text-decoration:none !important;
+}
+#main table tbody tr td{
+    border:1px solid #333;
+    padding:2px;
+}
+
+/*=====================*\
+    HEADER
+\*=====================*/
+#main_header > div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align:center;
+}
+#logo{/* Ne pas utiliser de margin sous peine de d?calage avec les liens skip */
+    display: inline-block;
+    vertical-align: top;
+    margin:auto;
+}
+#logo img{
+    width: 100%;
+    max-width: 215px;
+}
+
+/*- Breadcrumbs -------*/
+#Breadcrumbs{
+    display:none;
+}
+
+/*=====================*\
+    FOOTER
+\*=====================*/
+#footer {  
+    display:none;
+}
+
+/*=====================*\
+    MAIN
+\*=====================*/
+.content{
+    padding-top : 15px;	
+}
+#main header {
+    background-color: #ceecfb;
+}
+
+#main img{
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+#main .content blockquote{
+    background: #81e1cb;
+    border: 5px solid #1ddeb2;
+    color: #0f3a61;
+    padding: 30px 40px;
+    margin: 3em 1em;
+    position: relative;
+
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px; 
+}
+#main .content blockquote h2,
+#main .content blockquote h3,
+#main .content blockquote h4{
+    margin-top: 0em;
+    font-style: normal;
+}
+
+/*=====================*\
+    ACTUALITES
+\*=====================*/
+#actualites{
+    position:relative;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+#actualites article{ 
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 30%;
+    -ms-flex: 0 1 30%;
+    flex: 0 1 30%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+
+    margin: 0 5% 50px 0;
+    text-align: left;
+}
+#actualites article:nth-child(3n+3),
+#actualites article:last-child{
+    margin-right:0;
+}
+#actualites article a{
+    display:block;
+    text-decoration:none;
+}
+#actualites article h3,
+#actualites article h2{
+    margin: 1em 0 0.5em;
+    color: #0f3a61;
+}
+#actualites article .date{
+    font-size: 0.9em;
+    text-align: right;
+    color: #9f9f9e;
+}
+
+/*=====================*\
+    CONTACT
+\*=====================*/
+#map_canvas{
+    width:100%;
+    height:400px;
+}
+#map_canvas .gmnoprint a{
+    display:none;
+}
+/* articles multiples */
+#main #articles_libres article{
+    margin-bottom : 50px;
+}
+
+/*=====================*\
+    ARTICLES LIBRES
+\*=====================*/
+#main #articles_libres article{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+
+    margin-bottom:2em;
+}
+#main #articles_libres article > a{
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 0 33%;
+    -ms-flex: 0 0 33%;
+    flex: 0 0 33%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+
+    text-decoration:none;
+    display:block;
+}
+#main #articles_libres article > div{
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+
+    padding-left: 2em;
+}
+#main #articles_libres article h2{
+    margin-top:0;
+}
+#main #articles_libres article h2 a{
+    text-decoration:none;
+}
+
+/*=====================*\
+    ACCUEIL
+\*=====================*/
+.c2:not(.HTTPError) #main {
+    padding:0;
+}
+.c2:not(.HTTPError) #main header,
+.c2:not(.HTTPError) #main header h1{
+    display:none;
+}
+.c2:not(.HTTPError) #main > .center{
+    padding-top: 0;
+    display: block;
+    width: auto;
+}
+.c2 #intro{
+    padding: 15px 0;
+}
+.c2 #news h2{
+    margin:0;
+    text-align:center;
+}
+.c2 #news h2 a{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto 2em;
+    background: #ceecfb;
+    color: #0f3a61;
+    padding: 0.5em 2em;
+    border-radius: 15px;
+    text-decoration:none;
+}
+.c2 #news h3{
+    color: #0f3a61;
+}

@@ -1,0 +1,390 @@
+/**
+Theme Name: ijcai-21
+Author: Munna Chowdhury
+Author URI: mailto:munna.txt@gmail.com
+Description: Astra child theme for ijcai-21 by <a href="https://wpcol.com">wpcol.com</a>
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ijcai-21
+Template: astra
+*/
+
+.main-header-menu > .menu-item > a {
+	position: relative;
+    font-weight: 700;
+}
+
+.main-navigation #primary-menu > li:hover > a {
+	color: #f00;
+}
+
+.main-header-menu .current_page_item > a {
+	color: #f00;
+}
+
+.main-header-menu .current-menu-ancestor > a {
+	color: #f00;
+}
+
+.front-img,
+.page-template-page-nosidebar .entry-header .post-thumb-img-content {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    height: 500px;
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin-top: -4em;
+    margin-bottom: 4em;
+}
+
+.front-img {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 600px;
+    max-height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-template-page-nosidebar .entry-header .post-thumb-img-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.front-img .ast-container {
+    position: relative;
+}
+
+.front-img img {
+    position: absolute;
+    max-width: 350px;
+    right: 0;
+    top: 80px;
+}
+
+.page-template-page-rightsidebar .entry-header .post-thumb-img-content,
+.home .entry-header .post-thumb-img-content {
+    display: none;
+}
+
+p.has-background {
+    padding: 10px 30px;
+}
+
+.sidebar-main .widget-title {
+    border: 2px solid red;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 5px 15px;
+    color: red;
+}
+
+.entry-content h1.box-heading,
+.entry-content h2.box-heading,
+.entry-content h3.box-heading,
+.entry-content h4.box-heading,
+.entry-content h5.box-heading,
+.entry-content h6.box-heading,
+.entry-header .entry-title,
+.home .entry-header .entry-title {
+    border: 2px solid red;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2em;
+    padding: 5px 15px;
+	color: red;
+}
+
+aside a {
+    color: #3a3a3a;
+    text-decoration: underline;
+}
+
+.site-footer .ast-small-footer {
+    /* display: none; */
+}
+
+.site-footer,
+.site-footer li {
+    line-height: 2em;
+}
+
+.site-footer a:hover {
+	color: #ff6868;
+}
+
+.footer-adv-overlay {
+    background-color: #717170;
+}
+
+.site-footer .footer-adv-widget {
+    border-right: 1px solid #929292;
+    padding: 50px 30px;
+}
+
+.site-footer div.footer-adv-widget-4 {
+    border: none;
+}
+
+.footer-adv-overlay {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+@media(min-width: 769px){
+
+	.site-footer .ast-row {
+		display: flex;
+	}
+
+}
+
+@media (min-width: 982px) {
+
+	.main-navigation #primary-menu > li > a:before {
+		bottom: 30px;
+		transform: rotate(5deg);
+		transition: .3s;
+		opacity: 0;
+	}
+
+	.main-navigation #primary-menu > li:hover > a:before {
+		content: "";
+		position: absolute;
+		bottom: 25px;
+		height: 2px;
+		z-index: 2;
+		display: block;
+		background: #f00;
+		left: 1em;
+		right: 1em;
+		transform: rotate(0deg);
+    	transition: .3s;
+    	opacity: 1;
+	}
+
+}
+
+@media (min-width: 982px) and (max-width: 1090px) {
+
+	.main-header-menu > .menu-item > a {
+		font-size: 14px;
+	}
+
+}
+
+@media (min-width: 982px) and (max-width: 1300px) {
+
+	.front-img img {
+		right: 60px;
+	}
+
+}
+
+@media (max-width: 981px) {
+
+    .front-img,
+    .page-template-page-nosidebar .entry-header .post-thumb-img-content {
+        height: 300px;
+        max-height: 300px;
+    }
+
+    .front-img {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .front-img .ast-container {
+        height: 300px;
+        max-height: 300px;
+    }
+
+    .page-template-page-nosidebar .entry-header .post-thumb-img-content {
+        margin-bottom: 2em;
+    }
+
+    p.has-background {
+        padding: 10px 15px;
+    }
+
+    .front-img img {
+        position: absolute;
+        max-width: 350px;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .site-footer .footer-adv-widget {
+        border-right: none;
+        padding: 30px 20px 0 20px;
+    }
+
+    .footer-adv-widget-1 .widget:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer-adv-layout-4 .footer-adv-widget-2 .widget:last-child,
+    .footer-adv-layout-4 .footer-adv-widget-3 .widget:last-child {
+        margin-bottom: 0;
+    }
+
+    .site-footer div.footer-adv-widget-4 {
+        padding-bottom: 30px;
+    }
+
+    .front-img img {
+        max-width: 100%;
+    }
+
+
+}
+
+.it-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.it-picture {
+    flex: 1 0 auto;
+    max-width: 400px;
+    margin-top: 4em;
+    margin-left: .8em;
+}
+@media only screen and (max-width: 600px) {
+    .it-picture img {
+        width: 100px;
+    }
+}
+.it-entry {
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.it-entry .it-speaker {
+    font-size: 2em;
+
+}
+.it-entry .it-affiliation {
+    font-size:1em;
+    margin-top: -5px;
+    font-style: oblique;
+
+}
+.it-entry .it-title {
+    font-size:1em;
+}
+.it-entry .it-abstract {
+    font-size:0.8em;
+}
+.it-entry .it-sub {
+    margin-top: 2em;
+    font-size:0.8em;
+    font-weight: bolder;
+}
+
+.it-entry .it-sched {
+
+    font-size:0.8em;
+    font-weight: bolder;
+}
+
+.pa-entry {
+    margin-bottom: 1em;
+}
+
+.pa-authors {
+    font-style: italic;
+}
+
+.gl-entry {
+    margin-bottom: 1em;
+}
+
+.gl-authors {
+    font-style: italic;
+
+    color:gray;
+    font-size: 0.9em;
+}
+
+.gl-video, .gl-poster  {
+    color: #0274be;
+    margin-left: 3em;
+    margin-top: 1em;
+    font-size: small;
+}
+
+.gl-video .title {
+    font-weight: bold;
+}
+.ijcon {
+    font-size: 1.2em;
+padding-top: 4px;
+}
+
+.hidden {
+    display: none;
+
+}
+
+.venueopen {
+    background: red;
+    color:white;
+    font-size: 2em;
+    display: block;
+    text-align: center;
+}
+
+.enter_here_box {
+    width: 550px;
+    border: dashed;
+    text-align: center;
+    padding: 1em;
+    border-color: black;
+    border-width: thin;
+
+}
+
+.ec-title {
+    font-weight: bold;;
+}
+
+.ec-content {
+    margin: 0em 0em 2em 2em;
+}
+
+.ec-pdf a {
+    background-color: white;
+    padding: 0 1em;
+    color: red;
+    border-radius: 10px;
+    font-weight: bold;
+    border-color: red;
+    border-style: solid;
+    border-width: 1px;
+
+}
+.ec-pdf {
+    margin-top: 0.5em;
+}
+
+.gl-doi {
+    margin-top: 1em;
+    font-size: smaller;
+}
+
+.gl-doi a {
+    color: black;
+}

@@ -1,0 +1,349 @@
+@media (min-width:768px) {
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: white;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand';
+}
+
+h2{
+  font-size: 35px;
+  text-indent: -20px;
+  font-weight: 400;
+  padding-bottom: 30px;
+  font-family: 'Quicksand';
+  font-weight: 600;
+}
+
+
+h2:before {
+  content: "\A";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #67CD84;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+
+h3{
+  color: #68CF85;
+}
+
+.py-6 {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+p {
+  font-family: 'Quicksand';
+  font-size: 17px;
+  line-height: 23px;
+}
+
+.pr-15 {
+  padding-right: 15%;
+}
+
+a {
+  text-decoration: none;
+  /*border-bottom: 1px dotted #666666;*/
+  color: #67CD84!important;
+}
+
+a:visited 
+{
+  text-decoration: none;
+  /*border-bottom: 1px dotted #666666;*/
+  color: #4D895F;
+}
+
+a:hover {
+  color: #67CD84;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+
+table {
+  font-family: 'Quicksand';
+  font-size: 15px;
+  line-height: 1.3em;
+  border: 2px solid #67CD84;
+  background-color: white;
+  width: 70vw;
+  overflow-x: auto;
+  border-spacing: 0px;
+  border-collapse: separate;
+  padding: 2%;
+}
+
+table > tbody > tr, table > thead > tr {
+  vertical-align: top !important;
+  text-align: left;
+}
+
+table > tbody > tr > td, table > thead > tr > th {
+  padding: 5px 20px !important;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: #EEE !important;
+}
+
+tbody > tr > td > a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-item,
+.menu-item:hover
+ {
+  font-family: 'Quicksand';
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.1; 
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: black!important;
+}
+
+.navbar-toggler-icon{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.menu-item:hover:before {
+  content: "";
+  position: absolute;
+  top: 38px;
+  background: #68CF85;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  left: calc(50% - 4px);
+  text-decoration: none;
+}
+
+.bg-beige {
+  background-color: #f5f3f1;
+}
+
+.bg-footer {
+  background-color: #262626;
+}
+
+.papercontainer{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#authors{
+  word-wrap: break-word;
+}
+
+dd{
+  overflow-wrap: break-word;
+}
+
+.header-image {
+  /*min-height: 360px;*/
+  object-fit: cover;
+  margin-bottom: 50px;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width:768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #67cd84;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: 'Quicksand', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #ffffff !important;
+    margin-bottom: 5px;
+
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #f5f3f1;
+  color: black !important;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel, .accordion-content {
+  padding: 0 18px;
+  background-color: #f5f3f1;
+  display: none;
+  overflow: hidden;
+  font-size: 16px !important;
+  font-family: 'Quicksand', Helvetica, Arial, Lucida, sans-serif;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.panel > p , .accordion-content > p {
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  margin-top: 0px !important;
+  margin-bottom: 6px;
+}
+
+.panel > strong , .accordion-content >strong {
+  font-weight: bold;
+  line-height: 1.2 !important;
+}
+
+.panel > h3 , .accordion-content > h3{
+  padding-top: 10px !important;
+  font-size: 18px !important;
+  color: #67cd84;
+  line-height: 1.2 !important;
+  margin-bottom: 8px;
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #67cd84;
+  float: right;
+  margin-left: 5px;
+  background-color: white;
+  border-radius: 100%;
+
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
+
+.accordion-button {
+  display:none;
+
+}
+.accordion-content {
+  display:none;
+  padding: 0 18px;
+  background-color: #f5f3f1;
+  display: none;
+  overflow: hidden;
+  font-size: 16px !important;
+  font-family: 'Quicksand', Helvetica, Arial, Lucida, sans-serif;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+
+.link2 {
+  text-decoration:none;
+  display: inline;
+  margin-right: 5px;
+}
+
+.papercontainer .link2 {
+  text-decoration:none;
+  display: block;
+  margin-right: 5px;
+}
+
+.bibref {
+  margin-top: 10px;
+  /*margin-left: 10px;*/
+  display:none;
+  font-size:14px;
+  font-family: monospace;
+}
+
+.doi {
+  margin-top: 10px;
+  /*margin-left: 10px;*/
+  display:none;
+  font-size:14px;
+  font-family: monospace;
+}
+
+.papercontainer .bibref{
+  display: block;
+  margin-left: 0px;
+}
+
+.papercontainer .doi{
+  display: block;
+  margin-left: 0px;
+}
+
+.papercontainer font > b{
+  font-family: 'Quicksand';
+}
+
+.papercontainer #abstract,
+.papercontainer #authors{
+  font-family: 'Quicksand';
+  font-size: 17px;
+  line-height: 23px;
+}
+
+#papertitle{
+  font-size: 30px;
+  text-indent: -25px;
+  font-weight: 400;
+  padding-bottom: 5px;
+  font-family: 'Quicksand';
+  font-weight: 600;
+}
+
+#papertitle:before {
+  content: "\A";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #67CD84;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+ol {
+	  counter-reset: item;
+  }
+  ol li {
+	    display: block;
+    }
+    ol li:before {
+	      content: counters(item, ". ") ". ";
+	        counter-increment: item;
+	}

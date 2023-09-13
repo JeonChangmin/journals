@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://papers.nips.cc/paper_files/paper/2013 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Book</title>
+    <link rel="stylesheet" href="./2013_files/papers.css">
+
+    
+    <style>
+        
+    </style>
+
+
+    <!-- Bootstrap CSS -->
+    <!-- https://codepen.io/surjithctly/pen/PJqKzQ -->
+    <link rel="stylesheet" href="./2013_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="./2013_files/menus.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="./2013_files/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    
+    <script type="text/x-mathjax-config;executed=true">
+        MathJax.Hub.Config({
+      "tex2jax": {
+        "inlineMath": [["$","$"], ["\\(","\\)"]],
+        "displayMath": [["\\[","\\]"]],
+        "processEscapes": true
+      }
+    }
+    );
+
+    </script>
+
+    <style>
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #333;
+                color: #eee;
+            }
+        }
+
+        .btn-spacer {
+            margin: 2px;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #eee;
+            color: black;
+        }
+
+
+    </style>
+
+<script type="text/javascript" async="" src="./2013_files/MathJax.js.다운로드"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.mjx-chtml {display: inline-block; line-height: 0; text-indent: 0; text-align: left; text-transform: none; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; word-wrap: normal; word-spacing: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; margin: 0; padding: 1px 0}
+.MJXc-display {display: block; text-align: center; margin: 1em 0; padding: 0}
+.mjx-chtml[tabindex]:focus, body :focus .mjx-chtml[tabindex] {display: inline-table}
+.mjx-full-width {text-align: center; display: table-cell!important; width: 10000em}
+.mjx-math {display: inline-block; border-collapse: separate; border-spacing: 0}
+.mjx-math * {display: inline-block; -webkit-box-sizing: content-box!important; -moz-box-sizing: content-box!important; box-sizing: content-box!important; text-align: left}
+.mjx-numerator {display: block; text-align: center}
+.mjx-denominator {display: block; text-align: center}
+.MJXc-stacked {height: 0; position: relative}
+.MJXc-stacked > * {position: absolute}
+.MJXc-bevelled > * {display: inline-block}
+.mjx-stack {display: inline-block}
+.mjx-op {display: block}
+.mjx-under {display: table-cell}
+.mjx-over {display: block}
+.mjx-over > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-under > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-stack > .mjx-sup {display: block}
+.mjx-stack > .mjx-sub {display: block}
+.mjx-prestack > .mjx-presup {display: block}
+.mjx-prestack > .mjx-presub {display: block}
+.mjx-delim-h > .mjx-char {display: inline-block}
+.mjx-surd {vertical-align: top}
+.mjx-mphantom * {visibility: hidden}
+.mjx-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 2px 3px; font-style: normal; font-size: 90%}
+.mjx-annotation-xml {line-height: normal}
+.mjx-menclose > svg {fill: none; stroke: currentColor}
+.mjx-mtr {display: table-row}
+.mjx-mlabeledtr {display: table-row}
+.mjx-mtd {display: table-cell; text-align: center}
+.mjx-label {display: table-row}
+.mjx-box {display: inline-block}
+.mjx-block {display: block}
+.mjx-span {display: inline}
+.mjx-char {display: block; white-space: pre}
+.mjx-itable {display: inline-table; width: auto}
+.mjx-row {display: table-row}
+.mjx-cell {display: table-cell}
+.mjx-table {display: table; width: 100%}
+.mjx-line {display: block; height: 0}
+.mjx-strut {width: 0; padding-top: 1em}
+.mjx-vsize {width: 0}
+.MJXc-space1 {margin-left: .167em}
+.MJXc-space2 {margin-left: .222em}
+.MJXc-space3 {margin-left: .278em}
+.mjx-chartest {display: block; visibility: hidden; position: absolute; top: 0; line-height: normal; font-size: 500%}
+.mjx-chartest .mjx-char {display: inline}
+.mjx-chartest .mjx-box {padding-top: 1000px}
+.MJXc-processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MJXc-processed {display: none}
+.mjx-test {font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow: hidden; height: 1px}
+.mjx-test.mjx-test-display {display: table!important}
+.mjx-test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.mjx-test.mjx-test-default {display: block!important; clear: both}
+.mjx-ex-box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.mjx-test-inline .mjx-left-box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .mjx-right-box {display: inline-block; width: 0; float: right}
+.mjx-test-display .mjx-right-box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+#MathJax_CHTML_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.mjx-chtml .mjx-noError {line-height: 1.2; vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+.MJXc-TeX-unknown-R {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: normal}
+.MJXc-TeX-unknown-I {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: normal}
+.MJXc-TeX-unknown-B {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: bold}
+.MJXc-TeX-unknown-BI {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: bold}
+.MJXc-TeX-ams-R {font-family: MJXc-TeX-ams-R,MJXc-TeX-ams-Rw}
+.MJXc-TeX-cal-B {font-family: MJXc-TeX-cal-B,MJXc-TeX-cal-Bx,MJXc-TeX-cal-Bw}
+.MJXc-TeX-frak-R {font-family: MJXc-TeX-frak-R,MJXc-TeX-frak-Rw}
+.MJXc-TeX-frak-B {font-family: MJXc-TeX-frak-B,MJXc-TeX-frak-Bx,MJXc-TeX-frak-Bw}
+.MJXc-TeX-math-BI {font-family: MJXc-TeX-math-BI,MJXc-TeX-math-BIx,MJXc-TeX-math-BIw}
+.MJXc-TeX-sans-R {font-family: MJXc-TeX-sans-R,MJXc-TeX-sans-Rw}
+.MJXc-TeX-sans-B {font-family: MJXc-TeX-sans-B,MJXc-TeX-sans-Bx,MJXc-TeX-sans-Bw}
+.MJXc-TeX-sans-I {font-family: MJXc-TeX-sans-I,MJXc-TeX-sans-Ix,MJXc-TeX-sans-Iw}
+.MJXc-TeX-script-R {font-family: MJXc-TeX-script-R,MJXc-TeX-script-Rw}
+.MJXc-TeX-type-R {font-family: MJXc-TeX-type-R,MJXc-TeX-type-Rw}
+.MJXc-TeX-cal-R {font-family: MJXc-TeX-cal-R,MJXc-TeX-cal-Rw}
+.MJXc-TeX-main-B {font-family: MJXc-TeX-main-B,MJXc-TeX-main-Bx,MJXc-TeX-main-Bw}
+.MJXc-TeX-main-I {font-family: MJXc-TeX-main-I,MJXc-TeX-main-Ix,MJXc-TeX-main-Iw}
+.MJXc-TeX-main-R {font-family: MJXc-TeX-main-R,MJXc-TeX-main-Rw}
+.MJXc-TeX-math-I {font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw}
+.MJXc-TeX-size1-R {font-family: MJXc-TeX-size1-R,MJXc-TeX-size1-Rw}
+.MJXc-TeX-size2-R {font-family: MJXc-TeX-size2-R,MJXc-TeX-size2-Rw}
+.MJXc-TeX-size3-R {font-family: MJXc-TeX-size3-R,MJXc-TeX-size3-Rw}
+.MJXc-TeX-size4-R {font-family: MJXc-TeX-size4-R,MJXc-TeX-size4-Rw}
+.MJXc-TeX-vec-R {font-family: MJXc-TeX-vec-R,MJXc-TeX-vec-Rw}
+.MJXc-TeX-vec-B {font-family: MJXc-TeX-vec-B,MJXc-TeX-vec-Bx,MJXc-TeX-vec-Bw}
+@font-face {font-family: MJXc-TeX-ams-R; src: local('MathJax_AMS'), local('MathJax_AMS-Regular')}
+@font-face {font-family: MJXc-TeX-ams-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_AMS-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-B; src: local('MathJax_Caligraphic Bold'), local('MathJax_Caligraphic-Bold')}
+@font-face {font-family: MJXc-TeX-cal-Bx; src: local('MathJax_Caligraphic'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-cal-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-R; src: local('MathJax_Fraktur'), local('MathJax_Fraktur-Regular')}
+@font-face {font-family: MJXc-TeX-frak-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-B; src: local('MathJax_Fraktur Bold'), local('MathJax_Fraktur-Bold')}
+@font-face {font-family: MJXc-TeX-frak-Bx; src: local('MathJax_Fraktur'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-frak-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-BI; src: local('MathJax_Math BoldItalic'), local('MathJax_Math-BoldItalic')}
+@font-face {font-family: MJXc-TeX-math-BIx; src: local('MathJax_Math'); font-weight: bold; font-style: italic}
+@font-face {font-family: MJXc-TeX-math-BIw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Math-BoldItalic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Math-BoldItalic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-R; src: local('MathJax_SansSerif'), local('MathJax_SansSerif-Regular')}
+@font-face {font-family: MJXc-TeX-sans-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-B; src: local('MathJax_SansSerif Bold'), local('MathJax_SansSerif-Bold')}
+@font-face {font-family: MJXc-TeX-sans-Bx; src: local('MathJax_SansSerif'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-sans-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-I; src: local('MathJax_SansSerif Italic'), local('MathJax_SansSerif-Italic')}
+@font-face {font-family: MJXc-TeX-sans-Ix; src: local('MathJax_SansSerif'); font-style: italic}
+@font-face {font-family: MJXc-TeX-sans-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-script-R; src: local('MathJax_Script'), local('MathJax_Script-Regular')}
+@font-face {font-family: MJXc-TeX-script-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Script-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-type-R; src: local('MathJax_Typewriter'), local('MathJax_Typewriter-Regular')}
+@font-face {font-family: MJXc-TeX-type-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Typewriter-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Typewriter-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-R; src: local('MathJax_Caligraphic'), local('MathJax_Caligraphic-Regular')}
+@font-face {font-family: MJXc-TeX-cal-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-B; src: local('MathJax_Main Bold'), local('MathJax_Main-Bold')}
+@font-face {font-family: MJXc-TeX-main-Bx; src: local('MathJax_Main'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-main-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Main-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-I; src: local('MathJax_Main Italic'), local('MathJax_Main-Italic')}
+@font-face {font-family: MJXc-TeX-main-Ix; src: local('MathJax_Main'); font-style: italic}
+@font-face {font-family: MJXc-TeX-main-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Main-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-R; src: local('MathJax_Main'), local('MathJax_Main-Regular')}
+@font-face {font-family: MJXc-TeX-main-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-I; src: local('MathJax_Math Italic'), local('MathJax_Math-Italic')}
+@font-face {font-family: MJXc-TeX-math-Ix; src: local('MathJax_Math'); font-style: italic}
+@font-face {font-family: MJXc-TeX-math-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size1-R; src: local('MathJax_Size1'), local('MathJax_Size1-Regular')}
+@font-face {font-family: MJXc-TeX-size1-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Size1-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size2-R; src: local('MathJax_Size2'), local('MathJax_Size2-Regular')}
+@font-face {font-family: MJXc-TeX-size2-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Size2-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size3-R; src: local('MathJax_Size3'), local('MathJax_Size3-Regular')}
+@font-face {font-family: MJXc-TeX-size3-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Size3-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size4-R; src: local('MathJax_Size4'), local('MathJax_Size4-Regular')}
+@font-face {font-family: MJXc-TeX-size4-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Size4-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-R; src: local('MathJax_Vector'), local('MathJax_Vector-Regular')}
+@font-face {font-family: MJXc-TeX-vec-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-B; src: local('MathJax_Vector Bold'), local('MathJax_Vector-Bold')}
+@font-face {font-family: MJXc-TeX-vec-Bx; src: local('MathJax_Vector'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-vec-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Bold.otf') format('opentype')}
+</style></head>
+
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarToggler6" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggler6">
+        <a class="navbar-brand" href="https://papers.nips.cc/">NeurIPS Proceedings</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+                      <li class="nav-item">
+                <a class="nav-link" href="https://papers.nips.cc/admin/login/?next=/admin/"><i class="fas fa-sign-in-alt" title="Login"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://papers.nips.cc/admin/logout/?nextp=/admin"><i class="fas fa-sign-out-alt" title="Logout"></i></a>
+            </li>
+
+        </ul>
+        
+        <form class="form-inline my-2 my-lg-0" method="get" role="search" action="https://papers.nips.cc/papers/search">
+            
+            <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search" aria-label="Search" id="navsearch">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+        </form>
+    </div>
+</nav>
+
+<br>
+
+
+
+
+    <div class="container-fluid">
+        <div class="col">
+            <h4>Advances in Neural Information Processing Systems 26  (NIPS 2013)</h4>
+            <div style="width:100%">
+                
+                    Edited by: <i>C.J. Burges and L. Bottou and M. Welling and Z. Ghahramani and K.Q. Weinberger</i>
+                
+            </div>
+
+            
+                <div style="width:100%">
+                    <div class="float-right">
+                        <a href="https://www.proceedings.com/search-result/?search_query=nips"> Purchase Printed
+                            Proceeding</a></div>
+                    ISBN: 9781632660244</div>
+            
+            <hr style="background-color:gray;">
+            
+            <ul class=" paper-list">
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/01386bd6d8e091c2ab4c7c7de644d37b-Abstract.html">Inferring neural population dynamics from multiple partial recordings of the same neural circuit</a> <i>Srini Turaga, Lars Buesing, Adam M. Packer, Henry Dalgleish, Noah Pettit, Michael Hausser, Jakob H. Macke</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/021bbc7ee20b71134d53e20206bd6feb-Abstract.html">Approximate Gaussian process inference for the drift function in stochastic differential equations</a> <i>Andreas Ruttor, Philipp Batz, Manfred Opper</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/024d7f84fff11dd7e8d9c510137a2381-Abstract.html">Third-Order Edge Statistics: Contour Continuation, Curvature, and Cortical Connections</a> <i>Matthew Lawlor, Steven W. Zucker</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/02522a2b2726fb0a03bb19f2d8d9524d-Abstract.html">Transportability from Multiple Environments with Limited Experiments</a> <i>Elias Bareinboim, Sanghack Lee, Vasant Honavar, Judea Pearl</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/0266e33d3f546cb5436a10798e657d97-Abstract.html">On model selection consistency of penalized M-estimators: a geometric theory</a> <i>Jason D. Lee, Yuekai Sun, Jonathan E. Taylor</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/043c3d7e489c69b48737cc0c92d0f3a2-Abstract.html">Robust Bloom Filters for Large MultiLabel Classification Tasks</a> <i>Moustapha M. Cisse, Nicolas Usunier, Thierry Artières, Patrick Gallinari</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/05311655a15b75fab86956663e1819cd-Abstract.html">On the Relationship Between Binary Classification, Bipartite Ranking, and Binary Class Probability Estimation</a> <i>Harikrishna Narasimhan, Shivani Agarwal</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/062ddb6c727310e76b6200b7c71f63b5-Abstract.html">Sequential Transfer in Multi-armed Bandit with Finite Set of Models</a> <i>Mohammad Gheshlaghi azar, Alessandro Lazaric, Emma Brunskill</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/0768281a05da9f27df178b5c39a51263-Abstract.html">A Graphical Transformation for Belief Propagation: Maximum Weight Matchings and Odd-Sized Cycles</a> <i>Jinwoo Shin, Andrew E. Gelfand, Misha Chertkov</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/076a0c97d09cf1a0ec3e19c7f2529f2b-Abstract.html">A Kernel Test for Three-Variable Interactions</a> <i>Dino Sejdinovic, Arthur Gretton, Wicher Bergsma</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/077e29b11be80ab57e1a2ecabb7da330-Abstract.html">Accelerated Mini-Batch Stochastic Dual Coordinate Ascent</a> <i>Shai Shalev-Shwartz, Tong Zhang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/07cdfd23373b17c6b337251c22b7ea57-Abstract.html">A Scalable Approach to Probabilistic Latent Space Inference of Large-Scale Networks</a> <i>Junming Yin, Qirong Ho, Eric P. Xing</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/0bb4aec1710521c12ee76289d9440817-Abstract.html">Multi-Prediction Deep Boltzmann Machines</a> <i>Ian Goodfellow, Mehdi Mirza, Aaron Courville, Yoshua Bengio</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/0c0a7566915f4f24853fc4192689aa7e-Abstract.html">Learning and using language via recursive pragmatic reasoning about other agents</a> <i>Nathaniel J. Smith, Noah Goodman, Michael Frank</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/0deb1c54814305ca9ad266f53bc82511-Abstract.html">Reinforcement Learning in Robust Markov Decision Processes</a> <i>Shiau Hong Lim, Huan Xu, Shie Mannor</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/0ed9422357395a0d4879191c66f4faa2-Abstract.html">Regularized Spectral Clustering under the Degree-Corrected Stochastic Blockmodel</a> <i>Tai Qin, Karl Rohe</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/0ff39bbbf981ac0151d340c9aa40e63e-Abstract.html">A Novel Two-Step Method for Cross Language Representation Learning</a> <i>Min Xiao, Yuhong Guo</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/0ff8033cf9437c213ee13937b1c4c455-Abstract.html">Graphical Models for Inference with Missing Data</a> <i>Karthika Mohan, Judea Pearl, Jin Tian</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/109a0ca3bc27f3e96597370d5c8cf03d-Abstract.html">Convex Tensor Decomposition via Structured Schatten Norm Regularization</a> <i>Ryota Tomioka, Taiji Suzuki</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/115f89503138416a242f40fb7d7f338e-Abstract.html">Variational Inference for Mahalanobis Distance Metrics in Gaussian Process Regression</a> <i>Michalis Titsias RC AUEB, Miguel Lazaro-Gredilla</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/13f320e7b5ead1024ac95c3b208610db-Abstract.html">Efficient Online Inference for Bayesian Nonparametric Relational Models</a> <i>Dae Il Kim, Prem K. Gopalan, David Blei, Erik Sudderth</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/1579779b98ce9edb98dd85606f2c119d-Abstract.html">Convergence of Monte Carlo Tree Search in Simultaneous Move Games</a> <i>Viliam Lisy, Vojta Kovarik, Marc Lanctot, Branislav Bosansky</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/1714726c817af50457d810aae9d27a2e-Abstract.html">Learning to Pass Expectation Propagation Messages</a> <i>Nicolas Heess, Daniel Tarlow, John Winn</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/17c276c8e723eb46aef576537e9d56d0-Abstract.html">Bayesian Inference and Online Experimental Design for Mapping Neural Microcircuits</a> <i>Ben Shababo, Brooks Paige, Ari Pakman, Liam Paninski</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/184260348236f9554fe9375772ff966e-Abstract.html">Action is in the Eye of the Beholder: Eye-gaze Driven Model for Spatio-Temporal Action Localization</a> <i>Nataliya Shapovalova, Michalis Raptis, Leonid Sigal, Greg Mori</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/1896a3bf730516dd643ba67b4c447d36-Abstract.html">Integrated Non-Factorized Variational Inference</a> <i>Shaobo Han, Xuejun Liao, Lawrence Carin</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/18997733ec258a9fcaf239cc55d53363-Abstract.html">A Gang of Bandits</a> <i>Nicolò Cesa-Bianchi, Claudio Gentile, Giovanni Zappella</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/19bc916108fc6938f52cb96f7e087941-Abstract.html">Multiclass Total Variation Clustering</a> <i>Xavier Bresson, Thomas Laurent, David Uminsky, James von Brecht</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/1aa48fc4880bb0c9b8a3bf979d3b917e-Abstract.html">Simultaneous Rectification and Alignment via Robust Recovery of Low-rank Tensors</a> <i>Xiaoqin Zhang, Di Wang, Zhengyuan Zhou, Yi Ma</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/1abb1e1ea5f481b589da52303b091cbb-Abstract.html">BIG &amp; QUIC: Sparse Inverse Covariance Estimation for a Million Variables</a> <i>Cho-Jui Hsieh, Matyas A. Sustik, Inderjit S. Dhillon, Pradeep K. Ravikumar, Russell Poldrack</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/1afa34a7f984eeabdbb0a7d494132ee5-Abstract.html">Robust Multimodal Graph Matching: Sparse Coding Meets Graph Matching</a> <i>Marcelo Fiori, Pablo Sprechmann, Joshua Vogelstein, Pablo Muse, Guillermo Sapiro</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/1baff70e2669e8376347efd3a874a341-Abstract.html">Optimal integration of visual speed across different spatiotemporal frequency channels</a> <i>Matjaz Jogan, Alan A. Stocker</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/1cecc7a77928ca8133fa24680a88d2f9-Abstract.html">Translating Embeddings for Modeling Multi-relational Data</a> <i>Antoine Bordes, Nicolas Usunier, Alberto Garcia-Duran, Jason Weston, Oksana Yakhnenko</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/1e1d184167ca7676cf665225e236a3d2-Abstract.html">Synthesizing Robust Plans under Incomplete Domain Models</a> <i>Tuan A. Nguyen, Subbarao Kambhampati, Minh Do</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/1f4477bad7af3616c1f933a02bfabe4e-Abstract.html">Learning Gaussian Graphical Models with Observed or Latent FVSs</a> <i>Ying Liu, Alan Willsky</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/1f50893f80d6830d62765ffad7721742-Abstract.html">Extracting regions of interest from biological images with convolutional sparse block coding</a> <i>Marius Pachitariu, Adam M. Packer, Noah Pettit, Henry Dalgleish, Michael Hausser, Maneesh Sahani</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/1ff8a7b5dc7a7d1f0ed65aaa29c04b1e-Abstract.html">Training and Analysing Deep Recurrent Neural Networks</a> <i>Michiel Hermans, Benjamin Schrauwen</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/2050e03ca119580f74cca14cc6e97462-Abstract.html">Low-Rank Matrix and Tensor Completion via Adaptive Sampling</a> <i>Akshay Krishnamurthy, Aarti Singh</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/20d135f0f28185b84a4cf7aa51f29500-Abstract.html">Fast Determinantal Point Process Sampling with Application to Clustering</a> <i>Byungkon Kang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/226d1f15ecd35f784d2a20c3ecf56d7f-Abstract.html">Matrix factorization with binary components</a> <i>Martin Slawski, Matthias Hein, Pavlo Lutsik</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/2291d2ec3b3048d1a6f86c2c4591b7e0-Abstract.html">Reshaping Visual Datasets for Domain Adaptation</a> <i>Boqing Gong, Kristen Grauman, Fei Sha</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/22fb0cee7e1f3bde58293de743871417-Abstract.html">Perfect Associative Learning with Spike-Timing-Dependent Plasticity</a> <i>Christian Albers, Maren Westkott, Klaus Pawelzik</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/233509073ed3432027d48b1a83f5fbd2-Abstract.html">Tracking Time-varying Graphical Structure</a> <i>Erich Kummerfeld, David Danks</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/242c100dc94f871b6d7215b868a875f8-Abstract.html">Phase Retrieval using Alternating Minimization</a> <i>Praneeth Netrapalli, Prateek Jain, Sujay Sanghavi</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/24681928425f5a9133504de568f5f6df-Abstract.html">Unsupervised Structure Learning of Stochastic And-Or Grammars</a> <i>Kewei Tu, Maria Pavlovskaia, Song-Chun Zhu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/26337353b7962f533d78c762373b3318-Abstract.html">Learning Multi-level Sparse Representations</a> <i>Ferran Diego Andilla, Fred A. Hamprecht</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/2812e5cf6d8f21d69c91dddeefb792a7-Abstract.html">Estimation, Optimization, and Parallelism when Data is Sparse</a> <i>John Duchi, Michael I. Jordan, Brendan McMahan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/28267ab848bcf807b2ed53c3a8f8fc8a-Abstract.html">Predictive PAC Learning and Process Decompositions</a> <i>Cosma Shalizi, Aryeh Kontorovich</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/285f89b802bcb2651801455c86d78f2a-Abstract.html">Scalable Inference for Logistic-Normal Topic Models</a> <i>Jianfei Chen, Jun Zhu, Zi Wang, Xun Zheng, Bo Zhang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/286674e3082feb7e5afb92777e48821f-Abstract.html">A multi-agent control framework for co-adaptation in brain-computer interfaces</a> <i>Josh S. Merel, Roy Fox, Tony Jebara, Liam Paninski</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/28f0b864598a1291557bed248a998d4e-Abstract.html">Conditional Random Fields via Univariate Exponential Families</a> <i>Eunho Yang, Pradeep K. Ravikumar, Genevera I. Allen, Zhandong Liu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/28fc2782ea7ef51c1104ccf7b9bea13d-Abstract.html">Adaptivity to Local Smoothness and Dimension in Kernel Regression</a> <i>Samory Kpotufe, Vikas Garg</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/291597a100aadd814d197af4f4bab3a7-Abstract.html">Online Learning with Costly Features and Labels</a> <i>Navid Zolghadr, Gabor Bartok, Russell Greiner, András György, Csaba Szepesvari</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/2a50e9c2d6b89b95bcb416d6857f8b45-Abstract.html">An Approximate, Efficient LP Solver for LP Rounding</a> <i>Srikrishna Sridhar, Stephen Wright, Christopher Re, Ji Liu, Victor Bittorf, Ce Zhang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/2a9d121cd9c3a1832bb6d2cc6bd7a8a7-Abstract.html">Regression-tree Tuning in a Streaming Setting</a> <i>Samory Kpotufe, Francesco Orabona</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/2b8a61594b1f4c4db0902a8a395ced93-Abstract.html">Estimating LASSO Risk and Noise Level</a> <i>Mohsen Bayati, Murat A. Erdogdu, Andrea Montanari</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/2bcab9d935d219641434683dd9d18a03-Abstract.html">Demixing odors - fast inference in olfaction</a> <i>Agnieszka Grabska-Barwinska, Jeff Beck, Alexandre Pouget, Peter Latham</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/2d6cc4b2d139a53512fb8cbb3086ae2e-Abstract.html">Zero-Shot Learning Through Cross-Modal Transfer</a> <i>Richard Socher, Milind Ganjoo, Christopher D. Manning, Andrew Ng</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/2dace78f80bc92e6d7493423d729448e-Abstract.html">Optimistic policy iteration and natural actor-critic: A unifying view and a non-optimality result</a> <i>Paul Wagner</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/2dffbc474aa176b6dc957938c15d0c8b-Abstract.html">Bayesian Inference and Learning in Gaussian Process State-Space Models with Particle MCMC</a> <i>Roger Frigola, Fredrik Lindsten, Thomas B. Schön, Carl Edward Rasmussen</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/309928d4b100a5d75adff48a9bfc1ddb-Abstract.html">Stochastic Gradient Riemannian Langevin Dynamics on the Probability Simplex</a> <i>Sam Patterson, Yee Whye Teh</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/31b3b31a1c2f8a370206f111127c0dbd-Abstract.html">When are Overcomplete Topic Models Identifiable? Uniqueness of Tensor Tucker Decompositions with Structured Sparsity</a> <i>Anima Anandkumar, Daniel J. Hsu, Majid Janzamin, Sham M. Kakade</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/3210ddbeaa16948a702b6049b8d9a202-Abstract.html">Sign Cauchy Projections and Chi-Square Kernel</a> <i>Ping Li, Gennady Samorodnitsk, John Hopcroft</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/3295c76acbf4caaed33c36b1b5fc2cb1-Abstract.html">Transfer Learning in a Transductive Setting</a> <i>Marcus Rohrbach, Sandra Ebert, Bernt Schiele</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/32b30a250abd6331e03a2a1f16466346-Abstract.html">Solving inverse problem of Markov chain with partial observations</a> <i>Tetsuro Morimura, Takayuki Osogami, Tsuyoshi Ide</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/33e8075e9970de0cfea955afd4644bb2-Abstract.html">Wavelets on Graphs via Deep Learning</a> <i>Raif Rustamov, Leonidas J. Guibas</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/3493894fa4ea036cfc6433c3e2ee63b0-Abstract.html">Stochastic Convex Optimization with Multiple  Objectives</a> <i>Mehrdad Mahdavi, Tianbao Yang, Rong Jin</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/35cf8659cfcb13224cbd47863a34fc58-Abstract.html">Bayesian Hierarchical Community Discovery</a> <i>Charles Blundell, Yee Whye Teh</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/36a16a2505369e0c922b6ea7a23a56d2-Abstract.html">Contrastive Learning Using Spectral Methods</a> <i>James Y. Zou, Daniel J. Hsu, David C. Parkes, Ryan P. Adams</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/37a749d808e46495a8da1e5352d03cae-Abstract.html">Deep Fisher Networks for Large-Scale Image Classification</a> <i>Karen Simonyan, Andrea Vedaldi, Andrew Zisserman</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/37f0e884fbad9667e38940169d0a3c95-Abstract.html">Linear Convergence with Condition Number Independent Access of Full Gradients</a> <i>Lijun Zhang, Mehrdad Mahdavi, Rong Jin</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/3871bd64012152bfb53fdf04b401193f-Abstract.html">Learning with Noisy Labels</a> <i>Nagarajan Natarajan, Inderjit S. Dhillon, Pradeep K. Ravikumar, Ambuj Tewari</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/38af86134b65d0f10fe33d30dd76442e-Abstract.html">Variational Policy Search via Trajectory Optimization</a> <i>Sergey Levine, Vladlen Koltun</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/38db3aed920cf82ab059bfccbd02be6a-Abstract.html">Dropout Training as Adaptive Regularization</a> <i>Stefan Wager, Sida Wang, Percy S. Liang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/39461a19e9eddfb385ea76b26521ea48-Abstract.html">Prior-free and prior-dependent regret bounds for Thompson Sampling</a> <i>Sebastien Bubeck, Che-Yu Liu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/3948ead63a9f2944218de038d8934305-Abstract.html">Geometric optimisation on positive definite matrices for elliptically contoured distributions</a> <i>Suvrit Sra, Reshad Hosseini</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/39e4973ba3321b80f37d9b55f63ed8b8-Abstract.html">Capacity of strong attractor patterns to model behavioural and cognitive prototypes</a> <i>Abbas Edalat</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/3a835d3215755c435ef4fe9965a3f2a0-Abstract.html">Manifold-based Similarity Adaptation for Label Propagation</a> <i>Masayuki Karasuyama, Hiroshi Mamitsuka</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/3cec07e9ba5f5bb252d13f5f431e4bbb-Abstract.html">New Subsampling Algorithms for Fast Least Squares Regression</a> <i>Paramveer Dhillon, Yichao Lu, Dean P. Foster, Lyle Ungar</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/3dd48ab31d016ffcbf3314df2b3cb9ce-Abstract.html">A message-passing algorithm for multi-agent trajectory planning</a> <i>José Bento, Nate Derbinsky, Javier Alonso-Mora, Jonathan S. Yedidia</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/3df1d4b96d8976ff5986393e8767f5b2-Abstract.html">Solving the multi-way matching problem by permutation synchronization</a> <i>Deepti Pachauri, Risi Kondor, Vikas Singh</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/40008b9a5380fcacce3976bf7c08af5b-Abstract.html">Auditing: Active Learning with Outcome-Dependent Query Costs</a> <i>Sivan Sabato, Anand D. Sarwate, Nati Srebro</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/4122cb13c7a474c1976c9706ae36521d-Abstract.html">Restricting exchangeable nonparametric distributions</a> <i>Sinead A. Williamson, Steve N. MacEachern, Eric P. Xing</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/41ae36ecb9b3eee609d05b90c14222fb-Abstract.html">On the Linear Convergence of the Proximal Gradient Method for Trace Norm Regularization</a> <i>Ke Hou, Zirui Zhou, Anthony Man-Cho So, Zhi-Quan Luo</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/41bfd20a38bb1b0bec75acf0845530a7-Abstract.html">Eluder Dimension and the Sample Complexity of Optimistic Exploration</a> <i>Daniel Russo, Benjamin Van Roy</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/428fca9bc1921c25c5121f9da7815cde-Abstract.html">Efficient Algorithm for Privately Releasing Smooth Queries</a> <i>Ziteng Wang, Kai Fan, Jiaqi Zhang, Liwei Wang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/43baa6762fa81bb43b39c62553b2970d-Abstract.html">Buy-in-Bulk Active Learning</a> <i>Liu Yang, Jaime Carbonell</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/43feaeeecd7b2fe2ae2e26d917b6477d-Abstract.html">On Poisson Graphical Models</a> <i>Eunho Yang, Pradeep K. Ravikumar, Genevera I. Allen, Zhandong Liu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/443cb001c138b2561a0d90720d6ce111-Abstract.html">On Sampling from the Gibbs Distribution with Random Maximum A-Posteriori Perturbations</a> <i>Tamir Hazan, Subhransu Maji, Tommi Jaakkola</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/45645a27c4f1adc8a7a835976064a86d-Abstract.html">Factorized Asymptotic Bayesian Inference for Latent Feature Models</a> <i>Kohei Hayashi, Ryohei Fujimaki</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/456ac9b0d15a8b7f1e71073221059886-Abstract.html">Minimax Theory for High-dimensional Gaussian Mixtures with Sparse Mean Separation</a> <i>Martin Azizyan, Aarti Singh, Larry Wasserman</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/46922a0880a8f11f8f69cbb52b1396be-Abstract.html">Efficient Optimization for Sparse Gaussian Process Regression</a> <i>Yanshuai Cao, Marcus A. Brubaker, David J. Fleet, Aaron Hertzmann</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/47a658229eb2368a99f1d032c8848542-Abstract.html">Robust learning of low-dimensional dynamics from large neural ensembles</a> <i>David Pfau, Eftychios A. Pnevmatikakis, Liam Paninski</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/47d1e990583c9c67424d369f3414728e-Abstract.html">Causal Inference on Time Series using Restricted Structural Equation Models</a> <i>Jonas Peters, Dominik Janzing, Bernhard Schölkopf</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/49182f81e6a13cf5eaa496d51fea6406-Abstract.html">Better Approximation and Faster Algorithm Using the Proximal Average</a> <i>Yao-Liang Yu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/49b8b4f95f02e055801da3b4f58e28b7-Abstract.html">Robust Low Rank Kernel Embeddings of Multivariate Distributions</a> <i>Le Song, Bo Dai</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/4a213d37242bdcad8e7300e202e7caa4-Abstract.html">Learning the Local Statistics of Optical Flow</a> <i>Dan Rosenbaum, Daniel Zoran, Yair Weiss</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/4d2e7bd33c475784381a64e43e50922f-Abstract.html">Fast Algorithms for Gaussian Noise Invariant Independent Component Analysis</a> <i>James R. Voss, Luis Rademacher, Mikhail Belkin</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/4da04049a062f5adfe81b67dd755cecc-Abstract.html">Stochastic Majorization-Minimization Algorithms for Large-Scale Optimization</a> <i>Julien Mairal</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/4f284803bd0966cc24fa8683a34afc6e-Abstract.html">Online Learning in Markov Decision Processes with Adversarially Chosen Transition Probability Distributions</a> <i>Yasin Abbasi Yadkori, Peter L. Bartlett, Varun Kanade, Yevgeny Seldin, Csaba Szepesvari</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/502e4a16930e414107ee22b6198c578f-Abstract.html">Improved and Generalized Upper Bounds on the Complexity of Policy Iteration</a> <i>Bruno Scherrer</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/50c3d7614917b24303ee6a220679dab3-Abstract.html">Approximate Inference in Continuous Determinantal Processes</a> <i>Raja Hafiz Affandi, Emily Fox, Ben Taskar</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/51ef186e18dc00c2d31982567235c559-Abstract.html">Streaming Variational Bayes</a> <i>Tamara Broderick, Nicholas Boyd, Andre Wibisono, Ashia C. Wilson, Michael I. Jordan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/52292e0c763fd027c6eba6b8f494d2eb-Abstract.html">One-shot learning by inverting a compositional causal process</a> <i>Brenden M. Lake, Russ R. Salakhutdinov, Josh Tenenbaum</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/52720e003547c70561bf5e03b95aa99f-Abstract.html">Large Scale Distributed Sparse Precision Estimation</a> <i>Huahua Wang, Arindam Banerjee, Cho-Jui Hsieh, Pradeep K. Ravikumar, Inderjit S. Dhillon</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/539fd53b59e3bb12d203f45a912eeaf2-Abstract.html">Online Variational Approximations to non-Exponential Family Change Point Models: With Application to Radar Tracking</a> <i>Ryan D. Turner, Steven Bottone, Clay J. Stanek</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/53adaf494dc89ef7196d73636eb2451b-Abstract.html">RNADE: The real-valued neural autoregressive density-estimator</a> <i>Benigno Uria, Iain Murray, Hugo Larochelle</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/53c04118df112c13a8c34b38343b9c10-Abstract.html">Estimating the Unseen: Improved Estimators for Entropy and other Properties</a> <i>Paul Valiant, Gregory Valiant</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/53c3bce66e43be4f209556518c2fcb54-Abstract.html">Dynamic Clustering via Asymptotics of the Dependent Dirichlet Process Mixture</a> <i>Trevor Campbell, Miao Liu, Brian Kulis, Jonathan P. How, Lawrence Carin</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/53e3a7161e428b65688f14b84d61c610-Abstract.html">Parametric Task Learning</a> <i>Ichiro Takeuchi, Tatsuya Hongo, Masashi Sugiyama, Shinichi Nakajima</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/559cb990c9dffd8675f6bc2186971dc2-Abstract.html">Generalized Denoising Auto-Encoders as Generative Models</a> <i>Yoshua Bengio, Li Yao, Guillaume Alain, Pascal Vincent</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/5807a685d1a9ab3b599035bc566ce2b9-Abstract.html">Local Privacy and Minimax Bounds: Sharp Rates for Probability Estimation</a> <i>John Duchi, Martin J. Wainwright, Michael I. Jordan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/58c54802a9fb9526cd0923353a34a7ae-Abstract.html">Reward Mapping for Transfer in Long-Lived Agents</a> <i>Xiaoxiao Guo, Satinder Singh, Richard L. Lewis</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/598b3e71ec378bd83e0a727608b5db01-Abstract.html">Distributed Exploration in Multi-Armed Bandits</a> <i>Eshcar Hillel, Zohar S. Karnin, Tomer Koren, Ronny Lempel, Oren Somekh</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/59c33016884a62116be975a9bb8257e3-Abstract.html">It is all in the noise: Efficient multi-task Gaussian process inference with structured residuals</a> <i>Barbara Rakitsch, Christoph Lippert, Karsten Borgwardt, Oliver Stegle</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/5a4b25aaed25c2ee1b74de72dc03c14e-Abstract.html">Projecting Ising Model Parameters for Fast Mixing</a> <i>Justin Domke, Xianghang Liu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/5b69b9cb83065d403869739ae7f0995e-Abstract.html">Low-rank matrix reconstruction and clustering via approximate message passing</a> <i>Ryosuke Matsushita, Toshiyuki Tanaka</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/5c572eca050594c7bc3c36e7e8ab9550-Abstract.html">Inverse Density as an Inverse Problem: the Fredholm Equation Approach</a> <i>Qichao Que, Mikhail Belkin</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/5caf41d62364d5b41a893adc1a9dd5d4-Abstract.html">Modeling Overlapping Communities with Node Popularities</a> <i>Prem K. Gopalan, Chong Wang, David Blei</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/5dd9db5e033da9c6fb5ba83c7a7ebea9-Abstract.html">Reflection methods for user-friendly submodular optimization</a> <i>Stefanie Jegelka, Francis Bach, Suvrit Sra</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/5e1b18c4c6a6d31695acbae3fd70ecc6-Abstract.html">Compressive Feature Learning</a> <i>Hristo S. Paskov, Robert West, John C. Mitchell, Trevor Hastie</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/5e9f92a01c986bafcabbafd145520b13-Abstract.html">Sparse nonnegative deconvolution for compressive calcium imaging: algorithms and phase transitions</a> <i>Eftychios A. Pnevmatikakis, Liam Paninski</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/5ef0b4eba35ab2d6180b0bca7e46b6f9-Abstract.html">Probabilistic Low-Rank Matrix Completion with Adaptive Spectral Regularization Algorithms</a> <i>Adrien Todeschini, François Caron, Marie Chavent</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/5f2c22cb4a5380af7ca75622a6426917-Abstract.html">Global Solver and Its Efficient Approximation for Variational Bayesian Low-rank Subspace Clustering</a> <i>Shinichi Nakajima, Akiko Takeda, S. Derin Babacan, Masashi Sugiyama, Ichiro Takeuchi</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/6081594975a764c8e3a691fa2b3a321d-Abstract.html">Reservoir Boosting : Between Online and Offline Ensemble Learning</a> <i>Leonidas Lefakis, François Fleuret</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/621bf66ddb7c962aa0d22ac97d69b793-Abstract.html">Faster Ridge Regression via the Subsampled Randomized Hadamard Transform</a> <i>Yichao Lu, Paramveer Dhillon, Dean P. Foster, Lyle Ungar</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/647bba344396e7c8170902bcf2e15551-Abstract.html">Convex Relaxations for Permutation Problems</a> <i>Fajwel Fogel, Rodolphe Jenatton, Francis Bach, Alexandre D'Aspremont</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/65cc2c8205a05d7379fa3a6386f710e1-Abstract.html">Online Learning of Dynamic Parameters in Social Networks</a> <i>Shahin Shahrampour, Sasha Rakhlin, Ali Jadbabaie</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/678a1491514b7f1006d605e9161946b1-Abstract.html">Discovering Hidden Variables in Noisy-Or Networks using Quartet Tests</a> <i>Yacine Jernite, Yonatan Halpern, David Sontag</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/67d16d00201083a2b118dd5128dd6f59-Abstract.html">Gaussian Process Conditional Copulas with Applications to Financial Time Series</a> <i>José Miguel Hernández-Lobato, James R. Lloyd, Daniel Hernández-Lobato</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/67d96d458abdef21792e6d8e590244e7-Abstract.html">Non-Uniform Camera Shake Removal Using a Spatially-Adaptive Sparse Penalty</a> <i>Haichao Zhang, David Wipf</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/68053af2923e00204c3ca7c6a3150cf7-Abstract.html">Online learning in episodic Markovian decision processes by relative entropy policy search</a> <i>Alexander Zimin, Gergely Neu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/68a83eeb494a308fe5295da69428a507-Abstract.html">Bayesian inference for low rank spatiotemporal neural receptive fields</a> <i>Mijung Park, Jonathan W. Pillow</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/692f93be8c7a41525c0baf2076aecfb4-Abstract.html">Global MAP-Optimality by Shrinking the Combinatorial Search Area with Convex Relaxation</a> <i>Bogdan Savchynskyy, Jörg Hendrik Kappes, Paul Swoboda, Christoph Schnörr</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/69a5b5995110b36a9a347898d97a610e-Abstract.html">Error-Minimizing Estimates and Universal Entry-Wise Error Bounds for Low-Rank Matrix Completion</a> <i>Franz Kiraly, Louis Theran</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/69adc1e107f7f7d035d7baf04342e1ca-Abstract.html">Decision Jungles: Compact and Rich Models for Classification</a> <i>Jamie Shotton, Toby Sharp, Pushmeet Kohli, Sebastian Nowozin, John Winn, Antonio Criminisi</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/6a10bbd480e4c5573d8f3af73ae0454b-Abstract.html">Bayesian Estimation of Latently-grouped Parameters in Undirected Graphical Models</a> <i>Jie Liu, David Page</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/6a5889bb0190d0211a991f47bb19a777-Abstract.html">(More) Efficient Reinforcement Learning via Posterior Sampling</a> <i>Ian Osband, Daniel Russo, Benjamin Van Roy</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/6c14da109e294d1e8155be8aa4b1ce8e-Abstract.html">Forgetful Bayes and myopic planning: Human learning and decision-making in a bandit setting</a> <i>Shunan Zhang, Angela J. Yu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/6d0f846348a856321729a2f36734d1a7-Abstract.html">Stochastic Optimization of PCA with Capped MSG</a> <i>Raman Arora, Andy Cotter, Nati Srebro</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/6d70cb65d15211726dcce4c0e971e21c-Abstract.html">Embed and Project: Discrete Sampling with Universal Hashing</a> <i>Stefano Ermon, Carla P. Gomes, Ashish Sabharwal, Bart Selman</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/6da9003b743b65f4c0ccd295cc484e57-Abstract.html">Optimal Neural Population Codes for High-dimensional Stimulus Variables</a> <i>Zhuo Wang, Alan A. Stocker, Daniel D. Lee</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/6e0721b2c6977135b916ef286bcb49ec-Abstract.html">Near-Optimal Entrywise Sampling for Data Matrices</a> <i>Dimitris Achlioptas, Zohar S. Karnin, Edo Liberty</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/6e2713a6efee97bacb63e52c54f0ada0-Abstract.html">A Comparative Framework for Preconditioned Lasso Algorithms</a> <i>Fabian L. Wauthier, Nebojsa Jojic, Michael I. Jordan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/6e7d2da6d3953058db75714ac400b584-Abstract.html">Universal models for binary spike patterns using centered Dirichlet processes</a> <i>Il Memming Park, Evan W. Archer, Kenneth Latimer, Jonathan W. Pillow</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/6f3ef77ac0e3619e98159e9b6febf557-Abstract.html">What Are the Invariant Occlusive Components of Image Patches? A Probabilistic Generative Approach</a> <i>Zhenwen Dai, Georgios Exarchakis, Jörg Lücke</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/705f2172834666788607efbfca35afb3-Abstract.html">Correlations strike back (again): the case of associative memory retrieval</a> <i>Cristina Savin, Peter Dayan, Mate Lengyel</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/71f6278d140af599e06ad9bf1ba03cb0-Abstract.html">Understanding Dropout</a> <i>Pierre Baldi, Peter J. Sadowski</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7380ad8a673226ae47fce7bff88e9c33-Abstract.html">Supervised Sparse Analysis and Synthesis Operators</a> <i>Pablo Sprechmann, Roee Litman, Tal Ben Yakar, Alexander M. Bronstein, Guillermo Sapiro</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/74071a673307ca7459bcf75fbd024e09-Abstract.html">The Pareto Regret Frontier</a> <i>Wouter M. Koolen</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7504adad8bb96320eb3afdd4df6e1f60-Abstract.html">Approximate Dynamic Programming Finally Performs Well in the Game of Tetris</a> <i>Victor Gabillon, Mohammad Ghavamzadeh, Bruno Scherrer</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/75fc093c0ee742f6dddaa13fff98f104-Abstract.html">Learning Feature Selection Dependencies in Multi-task Learning</a> <i>Daniel Hernández-Lobato, José Miguel Hernández-Lobato</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7634ea65a4e6d9041cfd3f7de18e334a-Abstract.html">Dimension-Free Exponentiated Gradient</a> <i>Francesco Orabona</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/76cf99d3614e23eabab16fb27e944bf9-Abstract.html">Memory Limited, Streaming PCA</a> <i>Ioannis Mitliagkas, Constantine Caramanis, Prateek Jain</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7810ccd41bf26faaa2c4e1f20db70a71-Abstract.html">Σ-Optimality for Active Learning on Gaussian Random Fields</a> <i>Yifei Ma, Roman Garnett, Jeff Schneider</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7895fc13088ee37f511913bac71fa66f-Abstract.html">Recurrent linear models of simultaneously-recorded neural   populations</a> <i>Marius Pachitariu, Biljana Petreska, Maneesh Sahani</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7940ab47468396569a906f75ff3f20ef-Abstract.html">On the Complexity and Approximation of Binary Evidence in Lifted Inference</a> <i>Guy Van den Broeck, Adnan Darwiche</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7a53928fa4dd31e82c6ef826f341daec-Abstract.html">Pass-efficient unsupervised feature selection</a> <i>Crystal Maung, Haim Schweitzer</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7b5b23f4aadf9513306bcd59afb6e4c9-Abstract.html">Adaptive dropout for training deep neural networks</a> <i>Jimmy Ba, Brendan Frey</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7bb060764a818184ebb1cc0d43d382aa-Abstract.html">On the Representational Efficiency of Restricted Boltzmann Machines</a> <i>James Martens, Arkadev Chattopadhya, Toni Pitassi, Richard Zemel</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7bcdf75ad237b8e02e301f4091fb6bc8-Abstract.html">Robust Spatial Filtering with Beta Divergence</a> <i>Wojciech Samek, Duncan Blythe, Klaus-Robert Müller, Motoaki Kawanabe</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7cce53cf90577442771720a370c3c723-Abstract.html">DeViSE: A Deep Visual-Semantic Embedding Model</a> <i>Andrea Frome, Greg S. Corrado, Jon Shlens, Samy Bengio, Jeff Dean, Marc'Aurelio Ranzato, Tomas Mikolov</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7d771e0e8f3633ab54856925ecdefc5d-Abstract.html">Symbolic Opportunistic Policy Iteration for Factored-Action MDPs</a> <i>Aswin Raghavan, Roni Khardon, Alan Fern, Prasad Tadepalli</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7f100b7b36092fb9b06dfb4fac360931-Abstract.html">Least Informative Dimensions</a> <i>Fabian Sinz, Anna Stockl, Jan Grewe, Jan Benda</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7f24d240521d99071c93af3917215ef7-Abstract.html">A memory frontier for complex synapses</a> <i>Subhaneil Lahiri, Surya Ganguli</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7f39f8317fbdb1988ef4c628eba02591-Abstract.html">Data-driven Distributionally Robust Polynomial Optimization</a> <i>Martin Mevissen, Emanuele Ragnoli, Jia Yuan Yu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7f53f8c6c730af6aeb52e66eb74d8507-Abstract.html">Learning Stochastic Inverses</a> <i>Andreas Stuhlmüller, Jacob Taylor, Noah Goodman</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7f5d04d189dfb634e6a85bb9d9adf21e-Abstract.html">Stochastic Ratio Matching of RBMs for Sparse High-Dimensional Inputs</a> <i>Yann Dauphin, Yoshua Bengio</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7f975a56c761db6506eca0b37ce6ec87-Abstract.html">Distributed <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-1-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="font-size: 113%; position: relative;"><span id="MJXc-Node-1" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-2" class="mjx-mrow"><span id="MJXc-Node-3" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">k</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></span></span><script type="math/tex" id="MathJax-Element-1">k</script>-means and <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-2-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="font-size: 113%; position: relative;"><span id="MJXc-Node-4" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-5" class="mjx-mrow"><span id="MJXc-Node-6" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">k</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></span></span><script type="math/tex" id="MathJax-Element-2">k</script>-median Clustering on General Topologies</a> <i>Maria-Florina F. Balcan, Steven Ehrlich, Yingyu Liang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7fe1f8abaad094e0b5cb1b01d712f708-Abstract.html">Non-strongly-convex smooth stochastic approximation with convergence rate O(1/n)</a> <i>Francis Bach, Eric Moulines</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/7fec306d1e665bc9c748b5d2b99a6e97-Abstract.html">Predicting Parameters in Deep Learning</a> <i>Misha Denil, Babak Shakibi, Laurent Dinh, Marc'Aurelio Ranzato, Nando de Freitas</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/801c14f07f9724229175b8ef8b4585a8-Abstract.html">Estimation Bias in Multi-Armed Bandit Algorithms for Search Advertising</a> <i>Min Xu, Tao Qin, Tie-Yan Liu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8065d07da4a77621450aa84fee5656d9-Abstract.html">Learning Efficient Random Maximum A-Posteriori Predictors with Non-Decomposable Loss Functions</a> <i>Tamir Hazan, Subhransu Maji, Joseph Keshet, Tommi Jaakkola</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/819f46e52c25763a55cc642422644317-Abstract.html">q-OCSVM: A q-Quantile Estimator for High-Dimensional Distributions</a> <i>Assaf Glazer, Michael Lindenbaum, Shaul Markovitch</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/81e5f81db77c596492e6f1a5a792ed53-Abstract.html">Fantope Projection and Selection: A near-optimal convex relaxation of sparse PCA</a> <i>Vincent Q. Vu, Juhee Cho, Jing Lei, Karl Rohe</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/82965d4ed8150294d4330ace00821d77-Abstract.html">Fast Template Evaluation with Vector Quantization</a> <i>Mohammad Amin Sadeghi, David Forsyth</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/82aa4b0af34c2313a562076992e50aa3-Abstract.html">Sparse Additive Text Models with Low Rank Background</a> <i>Lei Shi</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/839ab46820b524afda05122893c2fe8e-Abstract.html">Correlated random features for fast semi-supervised learning</a> <i>Brian McWilliams, David Balduzzi, Joachim M. Buhmann</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/83adc9225e4deb67d7ce42d58fe5157c-Abstract.html">Variational Planning for Graph-based MDPs</a> <i>Qiang Cheng, Qiang Liu, Feng Chen, Alexander T. Ihler</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/83cdcec08fbf90370fcf53bdd56604ff-Abstract.html">Adaptive Anonymity via <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-3-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="font-size: 113%; position: relative;"><span id="MJXc-Node-7" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-8" class="mjx-mrow"><span id="MJXc-Node-9" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">b</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></span></span><script type="math/tex" id="MathJax-Element-3">b</script>-Matching</a> <i>Krzysztof M. Choromanski, Tony Jebara, Kui Tang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/84117275be999ff55a987b9381e01f96-Abstract.html">Statistical Active Learning Algorithms</a> <i>Maria-Florina F. Balcan, Vitaly Feldman</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/84438b7aae55a0638073ef798e50b4ef-Abstract.html">The Power of Asymmetry in Binary Hashing</a> <i>Behnam Neyshabur, Nati Srebro, Russ R. Salakhutdinov, Yury Makarychev, Payman Yadollahpour</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/846c260d715e5b854ffad5f70a516c88-Abstract.html">Bayesian Mixture Modelling and Inference based Thompson Sampling in Monte-Carlo Tree Search</a> <i>Aijun Bai, Feng Wu, Xiaoping Chen</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/84d2004bf28a2095230e8e14993d398d-Abstract.html">Distributed Submodular Maximization: Identifying Representative Elements in Massive Data</a> <i>Baharan Mirzasoleiman, Amin Karbasi, Rik Sarkar, Andreas Krause</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/856fc81623da2150ba2210ba1b51d241-Abstract.html">Analyzing the Harmonic Structure in Graph-Based Learning</a> <i>Xiao-Ming Wu, Zhenguo Li, Shih-Fu Chang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/860320be12a1c050cd7731794e231bd3-Abstract.html">Near-optimal Anomaly Detection in Graphs using Lovasz Extended Scan Statistic</a> <i>James L. Sharpnack, Akshay Krishnamurthy, Aarti Singh</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/86e8f7ab32cfd12577bc2619bc635690-Abstract.html">Bellman Error Based Feature Generation using Random Projections on Sparse Spaces</a> <i>Mahdi Milani Fard, Yuri Grinberg, Amir-massoud Farahmand, Joelle Pineau, Doina Precup</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/872488f88d1b2db54d55bc8bba2fad1b-Abstract.html">Similarity Component Analysis</a> <i>Soravit Changpinyo, Kuan Liu, Fei Sha</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/892c91e0a653ba19df81a90f89d99bcd-Abstract.html">Matrix Completion From any Given Set of Observations</a> <i>Troy Lee, Adi Shraibman</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8a0e1141fd37fa5b98d5bb769ba1a7cc-Abstract.html">A Deep Architecture for Matching Short Texts</a> <i>Zhengdong Lu, Hang Li</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8a1e808b55fde9455cb3d8857ed88389-Abstract.html">Sensor Selection in High-Dimensional Gaussian Trees with Nuisances</a> <i>Daniel S. Levine, Jonathan P. How</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8a3363abe792db2d8761d6403605aeb7-Abstract.html">The Total Variation on Hypergraphs - Learning on Hypergraphs Revisited</a> <i>Matthias Hein, Simon Setzer, Leonardo Jost, Syama Sundar Rangapuram</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8b16ebc056e613024c057be590b542eb-Abstract.html">Lasso Screening Rules via Dual Polytope Projection</a> <i>Jie Wang, Jiayu Zhou, Peter Wonka, Jieping Ye</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8b5040a8a5baf3e0e67386c2e3a9b903-Abstract.html">Multiscale Dictionary Learning for Estimating Conditional Distributions</a> <i>Francesca Petralia, Joshua T. Vogelstein, David B. Dunson</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8bf1211fd4b7b94528899de0a43b9fb3-Abstract.html">Dirty Statistical Models</a> <i>Eunho Yang, Pradeep K. Ravikumar</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8c19f571e251e61cb8dd3612f26d5ecf-Abstract.html">Online Learning of Nonparametric Mixture Models via Sequential Variational Approximation</a> <i>Dahua Lin</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8c235f89a8143a28a1d6067e959dd858-Abstract.html">Exact and Stable Recovery of Pairwise Interaction Tensors</a> <i>Shouyuan Chen, Michael R. Lyu, Irwin King, Zenglin Xu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8ce6790cc6a94e65f17f908f462fae85-Abstract.html">A* Lasso for Learning a Sparse Bayesian Network Structure for Continuous Variables</a> <i>Jing Xiang, Seyoung Kim</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8d34201a5b85900908db6cae92723617-Abstract.html">High-Dimensional Gaussian Process Bandits</a> <i>Josip Djolonga, Andreas Krause, Volkan Cevher</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8d6dc35e506fc23349dd10ee68dabb64-Abstract.html">Generalizing Analytic Shrinkage for Arbitrary Covariance Structures</a> <i>Daniel Bartz, Klaus-Robert Müller</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8dd48d6a2e2cad213179a3992c0be53c-Abstract.html">Higher Order Priors for Joint Intrinsic Image, Objects, and Attributes Estimation</a> <i>Vibhav Vineet, Carsten Rother, Philip Torr</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8f121ce07d74717e0b1f21d122e04521-Abstract.html">Online Robust PCA via Stochastic Optimization</a> <i>Jiashi Feng, Huan Xu, Shuicheng Yan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8f1d43620bc6bb580df6e80b0dc05c48-Abstract.html">Compete to Compute</a> <i>Rupesh K. Srivastava, Jonathan Masci, Sohrob Kazerounian, Faustino Gomez, Jürgen Schmidhuber</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8f468c873a32bb0619eaeb2050ba45d1-Abstract.html">Heterogeneous-Neighborhood-based Multi-Task Local Learning Algorithms</a> <i>Yu Zhang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/8fb21ee7a2207526da55a679f0332de2-Abstract.html">Scalable Influence Estimation in Continuous-Time Diffusion Networks</a> <i>Nan Du, Le Song, Manuel Gomez Rodriguez, Hongyuan Zha</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/903ce9225fca3e988c2af215d4e544d3-Abstract.html">More data speeds up training time in learning halfspaces over sparse vectors</a> <i>Amit Daniely, Nati Linial, Shai Shalev-Shwartz</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9232fe81225bcaef853ae32870a2b0fe-Abstract.html">Top-Down Regularization of Deep Belief Networks</a> <i>Hanlin Goh, Nicolas Thome, Matthieu Cord, Joo-Hwee Lim</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/92cc227532d17e56e07902b254dfad10-Abstract.html">Polar Operators for Structured Sparse Estimation</a> <i>Xinhua Zhang, Yao-Liang Yu, Dale Schuurmans</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/93d65641ff3f1586614cf2c1ad240b6c-Abstract.html">Learning with Invariance via Linear Functionals on Reproducing Kernel Hilbert Space</a> <i>Xinhua Zhang, Wee Sun Lee, Yee Whye Teh</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/944bdd9636749a0801c39b6e449dbedc-Abstract.html">Real-Time Inference for a Gamma Process Model of Neural Spiking</a> <i>David E. Carlson, Vinayak Rao, Joshua T. Vogelstein, Lawrence Carin</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9461cce28ebe3e76fb4b931c35a169b0-Abstract.html">Direct 0-1 Loss Minimization and Margin Maximization with Boosting</a> <i>Shaodan Zhai, Tian Xia, Ming Tan, Shaojun Wang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/94c7bb58efc3b337800875b5d382a072-Abstract.html">Marginals-to-Models Reducibility</a> <i>Tim Roughgarden, Michael Kearns</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9683cc5f89562ea48e72bb321d9f03fb-Abstract.html">Sketching Structured Matrices for Faster Nonlinear Regression</a> <i>Haim Avron, Vikas Sindhwani, David Woodruff</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9766527f2b5d3e95d4a733fcfb77bd7e-Abstract.html">Variance Reduction for Stochastic Gradient Optimization</a> <i>Chong Wang, Xi Chen, Alexander J. Smola, Eric P. Xing</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/98dce83da57b0395e163467c9dae521b-Abstract.html">On Decomposing the Proximal Map</a> <i>Yao-Liang Yu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/98f13708210194c475687be6106a3b84-Abstract.html">Documents as multiple overlapping windows into grids of counts</a> <i>Alessandro Perina, Nebojsa Jojic, Manuele Bicego, Andrzej Truski</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9908279ebbf1f9b250ba689db6a0222b-Abstract.html">Robust Sparse Principal Component Regression under the High Dimensional Elliptical Model</a> <i>Fang Han, Han Liu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/995665640dc319973d3173a74a03860c-Abstract.html">Optimizing Instructional Policies</a> <i>Robert V. Lindsey, Michael C. Mozer, William J. Huggins, Harold Pashler</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/995e1fda4a2b5f55ef0df50868bf2a8f-Abstract.html">Adaptive Market Making via Online Learning</a> <i>Jacob Abernethy, Satyen Kale</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/996a7fa078cc36c46d02f9af3bef918b-Abstract.html">Learning Prices for Repeated Auctions with Strategic Buyers</a> <i>Kareem Amin, Afshin Rostamizadeh, Umar Syed</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9996535e07258a7bbfd8b132435c5962-Abstract.html">Multilinear Dynamical Systems for Tensor Time Series</a> <i>Mark Rogers, Lei Li, Stuart J. Russell</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/99bcfcd754a98ce89cb86f73acc04645-Abstract.html">Computing the Stationary Distribution Locally</a> <i>Christina E. Lee, Asuman Ozdaglar, Devavrat Shah</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9a1158154dfa42caddbd0694a4e9bdc8-Abstract.html">Latent Maximum Margin Clustering</a> <i>Guang-Tong Zhou, Tian Lan, Arash Vahdat, Greg Mori</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9a1756fd0c741126d7bbd4b692ccbd91-Abstract.html">Hierarchical Modular Optimization of Convolutional Networks Achieves Representations Similar to Macaque IT and Human Ventral Stream</a> <i>Daniel L. Yamins, Ha Hong, Charles Cadieu, James J. DiCarlo</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9a96876e2f8f3dc4f3cf45f02c61c0c1-Abstract.html">Online PCA for Contaminated Data</a> <i>Jiashi Feng, Huan Xu, Shie Mannor, Shuicheng Yan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9aa42b31882ec039965f3c4923ce901b-Abstract.html">Distributed Representations of Words and Phrases and their Compositionality</a> <i>Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S. Corrado, Jeff Dean</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9ab0d88431732957a618d4a469a0d4c3-Abstract.html">Learning Multiple Models via Regularized Weighting</a> <i>Daniel Vainsencher, Shie Mannor, Huan Xu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9ac403da7947a183884c18a67d3aa8de-Abstract.html">Discriminative Transfer Learning with Tree-based Priors</a> <i>Nitish Srivastava, Russ R. Salakhutdinov</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9c01802ddb981e6bcfbec0f0516b8e35-Abstract.html">Machine Teaching for Bayesian Learners in the Exponential Family</a> <i>Jerry Zhu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9cf81d8026a9018052c429cc4e56739b-Abstract.html">Online Learning with Switching Costs and Other Adaptive Adversaries</a> <i>Nicolò Cesa-Bianchi, Ofer Dekel, Ohad Shamir</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/9e3cfc48eccf81a0d57663e129aef3cb-Abstract.html">From Bandits to Experts: A Tale of Domination and Independence</a> <i>Noga Alon, Nicolò Cesa-Bianchi, Claudio Gentile, Yishay Mansour</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a01a0380ca3c61428c26a231f0e49a09-Abstract.html">Which Space Partitioning Tree to Use for Search?</a> <i>Parikshit Ram, Alexander Gray</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a0e2a2c563d57df27213ede1ac4ac780-Abstract.html">Small-Variance Asymptotics for Hidden Markov Models</a> <i>Anirban Roychowdhury, Ke Jiang, Brian Kulis</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a1519de5b5d44b31a01de013b9b51a80-Abstract.html">Sparse Overlapping Sets Lasso for Multitask Learning and its Application to fMRI Analysis</a> <i>Nikhil Rao, Christopher Cox, Rob Nowak, Timothy T. Rogers</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a1d50185e7426cbb0acad1e6ca74b9aa-Abstract.html">Submodular Optimization with Submodular Cover and Submodular Knapsack Constraints</a> <i>Rishabh K. Iyer, Jeff A. Bilmes</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a223c6b3710f85df22e9377d6c4f7553-Abstract.html">Model Selection for High-Dimensional Regression under the Generalized Irrepresentability Condition</a> <i>Adel Javanmard, Andrea Montanari</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a2557a7b2e94197ff767970b67041697-Abstract.html">Scalable kernels for graphs with continuous attributes</a> <i>Aasa Feragen, Niklas Kasenburg, Jens Petersen, Marleen de Bruijne, Karsten Borgwardt</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a3f390d88e4c41f2747bfa2f1b5f87db-Abstract.html">Bayesian optimization explains human active search</a> <i>Ali Borji, Laurent Itti</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a49e9411d64ff53eccfdd09ad10a15b3-Abstract.html">B-test: A Non-parametric, Low Variance Kernel Two-sample Test</a> <i>Wojciech Zaremba, Arthur Gretton, Matthew Blaschko</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a50abba8132a77191791390c3eb19fe7-Abstract.html">Moment-based Uniform Deviation Bounds for <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-4-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="font-size: 113%; position: relative;"><span id="MJXc-Node-10" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-11" class="mjx-mrow"><span id="MJXc-Node-12" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">k</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></span></span><script type="math/tex" id="MathJax-Element-4">k</script>-means and Friends</a> <i>Matus J. Telgarsky, Sanjoy Dasgupta</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a5cdd4aa0048b187f7182f1b9ce7a6a7-Abstract.html">Convex Calibrated Surrogates for Low-Rank Loss Matrices with Applications to Subset Ranking Losses</a> <i>Harish G. Ramaswamy, Shivani Agarwal, Ambuj Tewari</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a7d8ae4569120b5bec12e7b6e9648b86-Abstract.html">Auxiliary-variable Exact Hamiltonian Monte Carlo Samplers for Binary Distributions</a> <i>Ari Pakman, Liam Paninski</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a8240cb8235e9c493a0c30607586166c-Abstract.html">Spectral methods for neural characterization using generalized quadratic models</a> <i>Il Memming Park, Evan W. Archer, Nicholas Priebe, Jonathan W. Pillow</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a8849b052492b5106526b2331e526138-Abstract.html">A Latent Source Model for Nonparametric Time Series Classification</a> <i>George H. Chen, Stanislav Nikolov, Devavrat Shah</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a97da629b098b75c294dffdc3e463904-Abstract.html">PAC-Bayes-Empirical-Bernstein Inequality</a> <i>Ilya O. Tolstikhin, Yevgeny Seldin</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/a9be4c2a4041cadbf9d61ae16dd1389e-Abstract.html">Convex Two-Layer Modeling</a> <i>Özlem Aslan, Hao Cheng, Xinhua Zhang, Dale Schuurmans</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/aab3238922bcc25a6f606eb525ffdc56-Abstract.html">The Randomized Dependence Coefficient</a> <i>David Lopez-Paz, Philipp Hennig, Bernhard Schölkopf</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/aace49c7d80767cffec0e513ae886df0-Abstract.html">Sparse Inverse Covariance Estimation with Calibration</a> <i>Tuo Zhao, Han Liu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/aba3b6fd5d186d28e06ff97135cade7f-Abstract.html">Thompson Sampling for 1-Dimensional Exponential Family Bandits</a> <i>Nathaniel Korda, Emilie Kaufmann, Remi Munos</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/ac1dd209cbcc5e5d1c6e28598e8cbbe8-Abstract.html">Accelerating Stochastic Gradient Descent using Predictive Variance Reduction</a> <i>Rie Johnson, Tong Zhang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/ac796a52db3f16bbdb6557d3d89d1c5a-Abstract.html">Multisensory Encoding, Decoding, and Identification</a> <i>Aurel A. Lazar, Yevgeniy Slutskiy</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/ad3019b856147c17e82a5bead782d2a8-Abstract.html">Learning invariant representations and applications to face verification</a> <i>Qianli Liao, Joel Z. Leibo, Tomaso Poggio</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/ae0eb3eed39d2bcef4622b2499a05fe6-Abstract.html">Optimistic Concurrency Control for Distributed Unsupervised Learning</a> <i>Xinghao Pan, Joseph E. Gonzalez, Stefanie Jegelka, Tamara Broderick, Michael I. Jordan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/ae5e3ce40e0404a45ecacaaf05e5f735-Abstract.html">Statistical analysis of coupled time series with Kernel Cross-Spectral Density operators.</a> <i>Michel Besserve, Nikos K. Logothetis, Bernhard Schölkopf</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/af21d0c97db2e27e13572cbf59eb343d-Abstract.html">Sinkhorn Distances: Lightspeed Computation of Optimal Transport</a> <i>Marco Cuturi</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/afd4836712c5e77550897e25711e1d96-Abstract.html">Nonparametric Multi-group Membership Model for Dynamic Networks</a> <i>Myunghwan Kim, Jure Leskovec</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/b056eb1587586b71e2da9acfe4fbd19e-Abstract.html">EDML for Learning Parameters in Directed and Undirected Graphical Models</a> <i>Khaled S. Refaat, Arthur Choi, Adnan Darwiche</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/b20bb95ab626d93fd976af958fbc61ba-Abstract.html">Flexible sampling of discrete data correlations without the marginal distributions</a> <i>Alfredo Kalaitzis, Ricardo Silva</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/b2f627fff19fda463cb386442eac2b3d-Abstract.html">Designed Measurements for Vector Count Data</a> <i>Liming Wang, David E. Carlson, Miguel Rodrigues, David Wilcox, Robert Calderbank, Lawrence Carin</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/b337e84de8752b27eda3a12363109e80-Abstract.html">Reasoning With Neural Tensor Networks for Knowledge Base Completion</a> <i>Richard Socher, Danqi Chen, Christopher D. Manning, Andrew Ng</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/b3ba8f1bee1238a2f37603d90b58898d-Abstract.html">Deep content-based music recommendation</a> <i>Aaron van den Oord, Sander Dieleman, Benjamin Schrauwen</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/b4d168b48157c623fbd095b4a565b5bb-Abstract.html">What do row and column marginals reveal about your dataset?</a> <i>Behzad Golshan, John Byers, Evimaria Terzi</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/b51a15f382ac914391a58850ab343b00-Abstract.html">Analyzing Hogwild Parallel Gaussian Gibbs Sampling</a> <i>Matthew J. Johnson, James Saunderson, Alan Willsky</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/b6f0479ae87d244975439c6124592772-Abstract.html">Latent Structured Active Learning</a> <i>Wenjie Luo, Alex Schwing, Raquel Urtasun</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/b73dfe25b4b8714c029b37a6ad3006fa-Abstract.html">Confidence Intervals and Hypothesis Testing for High-Dimensional Statistical Models</a> <i>Adel Javanmard, Andrea Montanari</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/b7b16ecf8ca53723593894116071700c-Abstract.html">Stochastic blockmodel approximation of a graphon: Theory and consistent estimation</a> <i>Edo M. Airoldi, Thiago B. Costa, Stanley H. Chan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/b7bb35b9c6ca2aee2df08cf09d7016c2-Abstract.html">More Effective Distributed ML via a Stale Synchronous Parallel Parameter Server</a> <i>Qirong Ho, James Cipar, Henggang Cui, Seunghak Lee, Jin Kyu Kim, Phillip B. Gibbons, Garth A. Gibson, Greg Ganger, Eric P. Xing</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/bac9162b47c56fc8a4d2a519803d51b3-Abstract.html">On Algorithms for Sparse Multi-factor NMF</a> <i>Siwei Lyu, Xin Wang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/bad5f33780c42f2588878a9d07405083-Abstract.html">Efficient Exploration and Value Function Generalization in Deterministic Systems</a> <i>Zheng Wen, Benjamin Van Roy</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/bca82e41ee7b0833588399b1fcd177c7-Abstract.html">Parallel Sampling of DP Mixture Models using Sub-Cluster Splits</a> <i>Jason Chang, John W. Fisher III</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/bcc0d400288793e8bdcd7c19a8ac0c2b-Abstract.html">Context-sensitive active sensing in humans</a> <i>Sheeraz Ahmad, He Huang, Angela J. Yu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/bdb106a0560c4e46ccc488ef010af787-Abstract.html">On the Sample Complexity of Subspace Learning</a> <i>Alessandro Rudi, Guillermo D. Canas, Lorenzo Rosasco</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c042f4db68f23406c6cecf84a7ebb0fe-Abstract.html">Non-Linear Domain Adaptation with Boosting</a> <i>Carlos J. Becker, Christos M. Christoudias, Pascal Fua</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c058f544c737782deacefa532d9add4c-Abstract.html">Learning Trajectory Preferences for  Manipulators via Iterative Improvement</a> <i>Ashesh Jain, Brian Wojcik, Thorsten Joachims, Ashutosh Saxena</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c06d06da9666a219db15cf575aff2824-Abstract.html">Learning Chordal Markov Networks by Constraint Satisfaction</a> <i>Jukka Corander, Tomi Janhunen, Jussi Rintanen, Henrik Nyman, Johan Pensar</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c1e39d912d21c91dce811d6da9929ae8-Abstract.html">Curvature and Optimal Algorithms for Learning and Minimizing Submodular Functions</a> <i>Rishabh K. Iyer, Stefanie Jegelka, Jeff A. Bilmes</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c26820b8a4c1b3c2aa868d6d57e14a79-Abstract.html">A New Convex Relaxation for Tensor Completion</a> <i>Bernardino Romera-Paredes, Massimiliano Pontil</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c2aee86157b4a40b78132f1e71a9e6f1-Abstract.html">DESPOT: Online POMDP Planning with Regularization</a> <i>Adhiraj Somani, Nan Ye, David Hsu, Wee Sun Lee</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c3c59e5f8b3e9753913f4d435b53c308-Abstract.html">Speeding up Permutation Testing in Neuroimaging</a> <i>Chris Hinrichs, Vamsi K. Ithapu, Qinyuan Sun, Sterling C. Johnson, Vikas Singh</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c3e878e27f52e2a57ace4d9a76fd9acf-Abstract.html">Neural representation of action sequences: how far can a simple snippet-matching model take us?</a> <i>Cheston Tan, Jedediah M. Singer, Thomas Serre, David Sheinberg, Tomaso Poggio</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c45147dee729311ef5b5c3003946c48f-Abstract.html">Modeling Clutter Perception using Parametric Proto-object Partitioning</a> <i>Chen-Ping Yu, Wen-Yu Hua, Dimitris Samaras, Greg Zelinsky</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c4851e8e264415c4094e4e85b0baa7cc-Abstract.html">Relevance Topic Model for Unstructured Social Group Activity Recognition</a> <i>Fang Zhao, Yongzhen Huang, Liang Wang, Tieniu Tan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c7e1249ffc03eb9ded908c236bd1996d-Abstract.html">Generalized Random Utility Models with Multiple Types</a> <i>Hossein Azari Soufiani, Hansheng Diao, Zhenyu Lai, David C. Parkes</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c850371fda6892fbfd1c5a5b457e5777-Abstract.html">(Nearly) Optimal Algorithms for Private Online Learning in Full-information and Bandit Settings</a> <i>Abhradeep Guha Thakurta, Adam Smith</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c913303f392ffc643f7240b180602652-Abstract.html">The Fast Convergence of Incremental PCA</a> <i>Akshay Balsubramani, Sanjoy Dasgupta, Yoav Freund</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/c9e1074f5b3f9fc8ea15d152add07294-Abstract.html">Point Based Value Iteration with Optimal Belief Compression for Dec-POMDPs</a> <i>Liam C. MacDermed, Charles L. Isbell</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/ca46c1b9512a7a8315fa3c5a946e8265-Abstract.html">Summary Statistics for Partitionings and Feature Allocations</a> <i>Isik B. Fidaner, Taylan Cemgil</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/cb70ab375662576bd1ac5aaf16b3fca4-Abstract.html">Learning Hidden Markov Models from Non-sequence Data via Tensor Decomposition</a> <i>Tzu-Kuo Huang, Jeff Schneider</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/cbb6a3b884f4f88b3a8e3d44c636cbd8-Abstract.html">On Flat versus Hierarchical Classification in Large-Scale Taxonomies</a> <i>Rohit Babbar, Ioannis Partalas, Eric Gaussier, Massih R. Amini</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/cc1aa436277138f61cda703991069eaf-Abstract.html">Scoring Workers in Crowdsourcing: How Many Control Questions are Enough?</a> <i>Qiang Liu, Alexander T. Ihler, Mark Steyvers</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/cd758e8f59dfdf06a852adad277986ca-Abstract.html">Cluster Trees on Manifolds</a> <i>Sivaraman Balakrishnan, Srivatsan Narayanan, Alessandro Rinaldo, Aarti Singh, Larry Wasserman</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/d10ec7c16cbe9de8fbb1c42787c3ec26-Abstract.html">Bayesian inference as iterated random functions with  applications to sequential inference in graphical models</a> <i>Arash Amini, XuanLong Nguyen</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/d1f255a373a3cef72e03aa9d980c7eca-Abstract.html">Recurrent networks of coupled Winner-Take-All oscillators for solving constraint satisfaction problems</a> <i>Hesham Mostafa, Lorenz. K. Mueller, Giacomo Indiveri</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/d296c101daa88a51f6ca8cfc1ac79b50-Abstract.html">Rapid Distance-Based Outlier Detection via Sampling</a> <i>Mahito Sugiyama, Karsten Borgwardt</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/d2ed45a52bc0edfa11c2064e9edee8bf-Abstract.html">Visual Concept Learning: Combining Machine Vision and Bayesian Generalization on Concept Hierarchies</a> <i>Yangqing Jia, Joshua T. Abbott, Joseph L. Austerweil, Tom Griffiths, Trevor Darrell</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/d490d7b4576290fa60eb31b5fc917ad1-Abstract.html">Memoized Online Variational Inference for Dirichlet Process Mixture Models</a> <i>Michael C. Hughes, Erik Sudderth</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/d554f7bb7be44a7267068a7df88ddd20-Abstract.html">Locally Adaptive Bayesian Multivariate Time Series</a> <i>Daniele Durante, Bruno Scarpa, David B. Dunson</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/d64a340bcb633f536d56e51874281454-Abstract.html">When in Doubt, SWAP: High-Dimensional Sparse Recovery from Correlated Measurements</a> <i>Divyanshu Vats, Richard Baraniuk</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/d6ef5f7fa914c19931a55bb262ec879c-Abstract.html">Information-theoretic lower bounds for distributed statistical estimation with communication constraints</a> <i>Yuchen Zhang, John Duchi, Michael I. Jordan, Martin J. Wainwright</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/d81f9c1be2e08964bf9f24b15f0e4900-Abstract.html">Learning Stochastic Feedforward Neural Networks</a> <i>Charlie Tang, Russ R. Salakhutdinov</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/d86ea612dec96096c5e0fcc8dd42ab6d-Abstract.html">Robust Transfer Principal Component Analysis with Rank Constraints</a> <i>Yuhong Guo</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/d93ed5b6db83be78efb0d05ae420158e-Abstract.html">A Determinantal Point Process Latent Variable Model for Inhibition in Neural Spiking Data</a> <i>Jasper Snoek, Richard Zemel, Ryan P. Adams</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/d9d4f495e875a2e075a1a4a6e1b9770f-Abstract.html">Reciprocally Coupled Local Estimators Implement Bayesian Information Integration Distributively</a> <i>Wen-Hao Zhang, Si Wu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/d9fc5b73a8d78fad3d6dffe419384e70-Abstract.html">Structured Learning via Logistic Regression</a> <i>Justin Domke</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/db2b4182156b2f1f817860ac9f409ad7-Abstract.html">Learning word embeddings efficiently with noise-contrastive estimation</a> <i>Andriy Mnih, Koray Kavukcuoglu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/dc4c44f624d600aa568390f1f1104aa0-Abstract.html">Generalized Method-of-Moments for Rank Aggregation</a> <i>Hossein Azari Soufiani, William Chen, David C. Parkes, Lirong Xia</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/dc58e3a306451c9d670adcd37004f48f-Abstract.html">Reconciling "priors" &amp; "priors" without prejudice?</a> <i>Remi Gribonval, Pierre Machart</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/dc6a6489640ca02b0d42dabeb8e46bb7-Abstract.html">Learning a Deep Compact Image Representation for Visual Tracking</a> <i>Naiyan Wang, Dit-Yan Yeung</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/dc912a253d1e9ba40e2c597ed2376640-Abstract.html">Trading Computation for Communication: Distributed Stochastic Dual Coordinate Ascent</a> <i>Tianbao Yang</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/dd77279f7d325eec933f05b1672f6a1f-Abstract.html">Projected Natural Actor-Critic</a> <i>Philip S. Thomas, William C. Dabney, Stephen Giguere, Sridhar Mahadevan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e00406144c1e7e35240afed70f34166a-Abstract.html">Minimax Optimal Algorithms for Unconstrained Linear Optimization</a> <i>Brendan McMahan, Jacob Abernethy</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e034fb6b66aacc1d48f445ddfb08da98-Abstract.html">Policy Shaping: Integrating Human Feedback with Reinforcement Learning</a> <i>Shane Griffith, Kaushik Subramanian, Jonathan Scholz, Charles L. Isbell, Andrea L. Thomaz</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e1e32e235eee1f970470a3a6658dfdd5-Abstract.html">Regret based Robust Solutions for Uncertain Markov Decision Processes</a> <i>Asrar Ahmed, Pradeep Varakantham, Yossiri Adulyasak, Patrick Jaillet</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e3796ae838835da0b6f6ea37bcf8bcb7-Abstract.html">Understanding variable importances in forests of randomized trees</a> <i>Gilles Louppe, Louis Wehenkel, Antonio Sutera, Pierre Geurts</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e48e13207341b6bffb7fb1622282247b-Abstract.html">Linear decision rule as aspiration for simple decision heuristics</a> <i>Özgür Şimşek</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e49b8b4053df9505e1f48c3a701c0682-Abstract.html">Adaptive Multi-Column Deep Neural Networks with Application to Robust Image Denoising</a> <i>Forest Agostinelli, Michael R. Anderson, Honglak Lee</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e53a0a2978c28872a4505bdb51db06dc-Abstract.html">Probabilistic Movement Primitives</a> <i>Alexandros Paraschos, Christian Daniel, Jan R. Peters, Gerhard Neumann</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e58cc5ca94270acaceed13bc82dfedf7-Abstract.html">Speedup Matrix Completion with Side Information: Application to Multi-Label Learning</a> <i>Miao Xu, Rong Jin, Zhi-Hua Zhou</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e5e63da79fcd2bebbd7cb8bf1c1d0274-Abstract.html">Message Passing Inference with Chemical Reaction Networks</a> <i>Nils E. Napp, Ryan P. Adams</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e5f6ad6ce374177eef023bf5d0c018b6-Abstract.html">Binary to Bushy: Bayesian Hierarchical Clustering with the Beta Coalescent</a> <i>Yuening Hu, Jordan L. Ying, Hal Daume III, Z. Irene Ying</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e6d8545daa42d5ced125a4bf747b3688-Abstract.html">A Stability-based Validation Procedure for Differentially Private Machine Learning</a> <i>Kamalika Chaudhuri, Staal A. Vinterbo</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e836d813fd184325132fca8edcdfb40e-Abstract.html">Unsupervised Spectral Learning of Finite State Transducers</a> <i>Raphael Bailly, Xavier Carreras, Ariadna Quattoni</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e96ed478dab8595a7dbda4cbcbee168f-Abstract.html">One-shot learning and big data with n=2</a> <i>Lee H. Dicker, Dean P. Foster</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/e97ee2054defb209c35fe4dc94599061-Abstract.html">Mapping paradigm ontologies to and from the brain</a> <i>Yannick Schwartz, Bertrand Thirion, Gael Varoquaux</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/eae27d77ca20db309e056e3d2dcd7d69-Abstract.html">Density estimation from unweighted k-nearest neighbor graphs: a roadmap</a> <i>Ulrike Von Luxburg, Morteza Alamgir</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/eb163727917cbba1eea208541a643e74-Abstract.html">Actor-Critic Algorithms for Risk-Sensitive MDPs</a> <i>Prashanth L.A., Mohammad Ghavamzadeh</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/eb6fdc36b281b7d5eabf33396c2683a2-Abstract.html">Probabilistic Principal Geodesic Analysis</a> <i>Miaomiao Zhang, Tom Fletcher</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/eb86d510361fc23b59f18c1bc9802cc6-Abstract.html">k-Prototype Learning for 3D Rigid Structures</a> <i>Hu Ding, Ronald Berezney, Jinhui Xu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/ebd9629fc3ae5e9f6611e2ee05a31cef-Abstract.html">Learning Adaptive Value of Information for Structured Prediction</a> <i>David J. Weiss, Ben Taskar</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/eddb904a6db773755d2857aacadb1cb0-Abstract.html">Spike train entropy-rate estimation using hierarchical Dirichlet process priors</a> <i>Karin C. Knudson, Jonathan W. Pillow</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/ef0d3930a7b6c95bd2b32ed45989c61f-Abstract.html">Regularized M-estimators with nonconvexity: Statistical and algorithmic theory for local optima</a> <i>Po-Ling Loh, Martin J. Wainwright</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/ef575e8837d065a1683c022d2077d342-Abstract.html">Robust Data-Driven Dynamic Programming</a> <i>Grani Adiwena Hanasusanto, Daniel Kuhn</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f033ab37c30201f73f142449d037028d-Abstract.html">Provable Subspace Clustering: When LRR meets SSC</a> <i>Yu-Xiang Wang, Huan Xu, Chenlei Leng</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f0dd4a99fba6075a9494772b58f95280-Abstract.html">Optimization, Learning, and Games with Predictable Sequences</a> <i>Sasha Rakhlin, Karthik Sridharan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f1b6f2857fb6d44dd73c7041e0aa0f19-Abstract.html">Beyond Pairwise: Provably Fast Algorithms for Approximate <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-5-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="font-size: 113%; position: relative;"><span id="MJXc-Node-13" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-14" class="mjx-mrow"><span id="MJXc-Node-15" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">k</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></span></span><script type="math/tex" id="MathJax-Element-5">k</script>-Way  Similarity Search</a> <i>Anshumali Shrivastava, Ping Li</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f2201f5191c4e92cc5af043eebfd0946-Abstract.html">Firing rate predictions in optimal balanced networks</a> <i>David G. Barrett, Sophie Denève, Christian K. Machens</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f33ba15effa5c10e873bf3842afb46a6-Abstract.html">Multi-Task Bayesian Optimization</a> <i>Kevin Swersky, Jasper Snoek, Ryan P. Adams</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f340f1b1f65b6df5b5e3f94d95b11daf-Abstract.html">Using multiple samples to learn mixture models</a> <i>Jason D. Lee, Ran Gilad-Bachrach, Rich Caruana</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f387624df552cea2f369918c5e1e12bc-Abstract.html">First-order Decomposition Trees</a> <i>Nima Taghipour, Jesse Davis, Hendrik Blockeel</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f4552671f8909587cf485ea990207f3b-Abstract.html">Noise-Enhanced Associative Memories</a> <i>Amin Karbasi, Amir Hesam Salavati, Amin Shokrollahi, Lav R. Varshney</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f4573fc71c731d5c362f0d7860945b88-Abstract.html">Adaptive Submodular Maximization in Bandit Setting</a> <i>Victor Gabillon, Branislav Kveton, Zheng Wen, Brian Eriksson, S. Muthukrishnan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f4be00279ee2e0a53eafdaa94a151e2c-Abstract.html">Approximate inference in latent Gaussian-Markov models from continuous time observations</a> <i>Botond Cseke, Manfred Opper, Guido Sanguinetti</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f5deaeeae1538fb6c45901d524ee2f98-Abstract.html">Lexical and Hierarchical Topic Regression</a> <i>Viet-An Nguyen, Jordan L. Ying, Philip Resnik</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f64eac11f2cd8f0efa196f8ad173178e-Abstract.html">Adaptive Step-Size for Policy Gradient Methods</a> <i>Matteo Pirotta, Marcello Restelli, Luca Bascetta</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f73b76ce8949fe29bf2a537cfa420e8f-Abstract.html">Mixed Optimization for Smooth Functions</a> <i>Mehrdad Mahdavi, Lijun Zhang, Rong Jin</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f7cade80b7cc92b991cf4d2806d6bd78-Abstract.html">Deep Neural Networks for Object Detection</a> <i>Christian Szegedy, Alexander Toshev, Dumitru Erhan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f7e6c85504ce6e82442c770f7c8606f0-Abstract.html">A simple example of Dirichlet process mixture inconsistency for the number of components</a> <i>Jeffrey W. Miller, Matthew T. Harrison</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f91e24dfe80012e2a7984afa4480a6d6-Abstract.html">Learning Kernels Using Local Rademacher Complexity</a> <i>Corinna Cortes, Marius Kloft, Mehryar Mohri</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f9a40a4780f5e1306c46f1c8daecee3b-Abstract.html">Bayesian entropy estimation for binary spike train data using parametric prior knowledge</a> <i>Evan W. Archer, Il Memming Park, Jonathan W. Pillow</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/f9b902fc3289af4dd08de5d1de54f68f-Abstract.html">Mid-level Visual Element Discovery as Discriminative Mode Seeking</a> <i>Carl Doersch, Abhinav Gupta, Alexei A. Efros</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/fa14d4fe2f19414de3ebd9f63d5c0169-Abstract.html">Approximate Bayesian Image Interpretation using Generative Probabilistic Graphics Programs</a> <i>Vikash K. Mansinghka, Tejas D. Kulkarni, Yura N. Perov, Josh Tenenbaum</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/fb60d411a5c5b72b2e7d3527cfc84fd0-Abstract.html">Annealing between distributions by averaging moments</a> <i>Roger B. Grosse, Chris J. Maddison, Russ R. Salakhutdinov</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/fb7b9ffa5462084c5f4e7e85a093e6d7-Abstract.html">Blind Calibration in Compressed Sensing using Message Passing Algorithms</a> <i>Christophe Schulke, Francesco Caltagirone, Florent Krzakala, Lenka Zdeborová</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/fb89705ae6d743bf1e848c206e16a1d7-Abstract.html">Active Learning for Probabilistic Hypotheses Using the Maximum Gibbs Error Criterion</a> <i>Nguyen Viet Cuong, Wee Sun Lee, Nan Ye, Kian Ming A. Chai, Hai Leong Chieu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/fc2c7c47b918d0c2d792a719dfb602ef-Abstract.html">Two-Target Algorithms  for Infinite-Armed   Bandits with Bernoulli Rewards</a> <i>Thomas Bonald, Alexandre Proutiere</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/fc8001f834f6a5f0561080d134d53d29-Abstract.html">Learning to Prune in Metric and Non-Metric Spaces</a> <i>Leonid Boytsov, Bilegsaikhan Naidan</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/fd5c905bcd8c3348ad1b35d7231ee2b1-Abstract.html">Learning from Limited Demonstrations</a> <i>Beomjoon Kim, Amir-massoud Farahmand, Joelle Pineau, Doina Precup</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/fe709c654eac84d5239d1a12a4f71877-Abstract.html">Aggregating Optimistic Planning Trees for Solving Markov Decision Processes</a> <i>Gunnar Kedenburg, Raphael Fonteneau, Remi Munos</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/fec8d47d412bcbeece3d9128ae855a7a-Abstract.html">Action from Still Image Dataset and Inverse Optimal Control to Learn Task Specific Visual Scanpaths</a> <i>Stefan Mathe, Cristian Sminchisescu</i></li>
+                
+                    <li class="none">
+                        <a title="paper title" href="https://papers.nips.cc/paper_files/paper/2013/hash/ffeed84c7cb1ae7bf4ec4bd78275bb98-Abstract.html">How to Hedge an Option Against an Adversary: Black-Scholes Pricing is Minimax Optimal</a> <i>Jacob Abernethy, Peter L. Bartlett, Rafael Frongillo, Andre Wibisono</i></li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+<script src="./2013_files/jquery-3.6.0.min.js.다운로드" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="./2013_files/popper.min.js.다운로드" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="./2013_files/bootstrap.min.js.다운로드" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script>
+    $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+        if (!$(this).next().hasClass('show')) {
+            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+        }
+        var $subMenu = $(this).next(".dropdown-menu");
+        $subMenu.toggleClass('show');
+
+
+        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+            $('.dropdown-submenu .show').removeClass("show");
+        });
+
+
+        return false;
+    });
+</script>
+
+
+
+<br> 
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Name Change Policy</h4>
+                <button type="button pull-right" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              </div>
+              <div class="modal-body">
+                <p>Requests for name changes in the electronic proceedings will be accepted with no questions asked.  However name changes may cause bibliographic tracking issues.  Authors are asked to consider this carefully and discuss it with their co-authors prior to requesting a name change in the electronic proceedings.</p>
+
+<p>Use the "Report an Issue" link to request a name change.</p>
+
+              </div> 
+              <div class="modal-footer">
+
+
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+
+<footer class="footer">
+    <div class="btn-spacer">
+        <a href="https://neurips.cc/Help/Contact?select=Conference">Report an Issue</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;        <a href="https://papers.nips.cc/paper_files/paper/2013#" class="modal-link" data-toggle="modal" data-target="#myModal">Name Change Policy</a>
+    </div>
+    
+</footer>
+<div class="hidden">Do not remove: This comment is monitored to verify that the site is working properly</div>
+<!-- Do not remove: This comment is monitored to verify that the site is working properly -->
+
+
+</body></html>
