@@ -31,6 +31,7 @@
 * IPSN: Information Processing in Sensor Networks
 * HotMobile: Mobile Computing Systems and Applications
 * MobiHoc: Mobile and Ad Hoc Networking and Computing
+* ISMAR: International Symposium on Mixed and Augmented Reality
 
 ### Network Systems
 * INFOCOM: International Conference on Computer Communications
@@ -61,6 +62,7 @@
 * ICCV: International Conference on Computer Vision
 * ECCV: European Conference on Computer Vision
 * WACV: Winter Conference on Applications of Computer Vision
+* 3DV: International Conference on 3D Vision
 
 ### Robotics
 * ICRA: International Conference on Robotics and Automation
