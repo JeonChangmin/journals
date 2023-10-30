@@ -79,3 +79,10 @@
 * NeurIPS: Conference on Neural Information Processing Systems
 * AAAI: American Association for Artificial Intelligence
 * KDD: Knowledge Discovery and Data Mining
+
+### Others: Compilers
+* ICCAD: International Conference on Computer-Aided Design
+* DAT: Design Automation Conference
+* DATE: Design, Automation, and Test in Europe
+* CGO: Code Generation and Optimization
+* CC: Compiler Construction
